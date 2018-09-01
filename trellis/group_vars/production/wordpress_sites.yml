@@ -6,8 +6,6 @@ wordpress_sites:
   www.tedxsaotome.com:
     site_hosts:
       - canonical: www.tedxsaotome.com
-        redirects:
-          - tedxsaotome.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: kris@haam.co
     repo: git@github.com:krishaamer/tedx2018.git # replace with your Git repo URL
