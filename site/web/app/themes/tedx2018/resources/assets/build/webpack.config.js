@@ -1,6 +1,7 @@
 'use strict'; // eslint-disable-line
 
 const webpack = require('webpack');
+const path = require('path');
 const merge = require('webpack-merge');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -36,6 +37,19 @@ let webpackConfig = {
     source: false,
     publicPath: false,
   },
+  resolve: {
+    alias: {
+      'theme.config': path.join(__dirname, 'sui-theme/theme.config'),
+    },
+    modules: [
+      config.paths.assets,
+      'node_modules',
+    ],
+    enforceExtension: false,
+  },
+  resolveLoader: {
+    moduleExtensions: ['-loader'],
+  },
   module: {
     rules: [
       {
@@ -46,7 +60,7 @@ let webpackConfig = {
       },
       {
         enforce: 'pre',
-        test: /\.(js|s?[ca]ss)$/,
+        test: /\.(js|less)$/,
         include: config.paths.assets,
         loader: 'import-glob',
       },
@@ -76,24 +90,33 @@ let webpackConfig = {
         }),
       },
       {
-        test: /\.scss$/,
+        test: /\.less$/,
         include: config.paths.assets,
         use: ExtractTextPlugin.extract({
           fallback: 'style',
           use: [
-            { loader: 'cache' },
-            { loader: 'css', options: { sourceMap: config.enabled.sourceMaps } },
+            { 
+              loader: 'cache',
+            },
+            { 
+              loader: 'css', options: {
+                sourceMap: config.enabled.sourceMaps,
+              },
+            },
             {
               loader: 'postcss', options: {
                 config: { path: __dirname, ctx: config },
                 sourceMap: config.enabled.sourceMaps,
               },
             },
-            { loader: 'resolve-url', options: { sourceMap: config.enabled.sourceMaps } },
             {
-              loader: 'sass', options: {
+              loader: 'resolve-url', options: {
                 sourceMap: config.enabled.sourceMaps,
-                sourceComments: true,
+              },
+            },
+            { 
+              loader: 'less-loader', options: { 
+                sourceMap: config.enabled.sourceMaps,
               },
             },
           ],
@@ -119,16 +142,6 @@ let webpackConfig = {
         },
       },
     ],
-  },
-  resolve: {
-    modules: [
-      config.paths.assets,
-      'node_modules',
-    ],
-    enforceExtension: false,
-  },
-  resolveLoader: {
-    moduleExtensions: ['-loader'],
   },
   externals: {
     jquery: 'jQuery',
@@ -165,7 +178,7 @@ let webpackConfig = {
       stats: { colors: true },
     }),
     new webpack.LoaderOptionsPlugin({
-      test: /\.s?css$/,
+      test: /\.less$/,
       options: {
         output: { path: config.paths.dist },
         context: config.paths.assets,
@@ -179,7 +192,7 @@ let webpackConfig = {
     }),
     new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
-      syntax: 'scss',
+      syntax: 'less',
     }),
     new FriendlyErrorsWebpackPlugin(),
   ],

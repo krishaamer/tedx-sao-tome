@@ -1,0 +1,17 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@background: none;
+@border: 0;
+@boxShadow: none;
+@borderRadius: 0;
+@imageBorderRadius: 0;
+@headerLinkColor: @black;
+@headerFontSize: 1rem;
+@headerMargin: 0;
+@metaColor: @black;
+@metaFontSize: 0.6875rem;
+@metaTextTransform: uppercase;
+@contentMinWidth: 100px;
+@groupMargin: 1rem 0;

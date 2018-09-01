@@ -1,0 +1,6 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@defaultTextColor: @black;
+@selectionBorder: none;

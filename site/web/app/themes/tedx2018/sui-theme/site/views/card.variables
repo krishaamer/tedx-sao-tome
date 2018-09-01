@@ -1,0 +1,21 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@shadowDistance: 0;
+@shadowBoxShadow: none;
+@borderShadow: none;
+@extraDivider: none;
+@contentDivider: none;
+@extraPadding: 0;
+@extraColor: @black;
+@extraBoxShadow: none;
+@contentPadding: 1rem 0;
+@metaColor: @black;
+@metaLinkColor: @black;
+@metaLinkHoverColor: @green;
+@headerFontSize: 1.375rem;
+@metaFontSize: 0.6875rem;
+@metaTextTransform: uppercase;
+@linkHoverTransform: none;
+@headerWordWrap: break-word;

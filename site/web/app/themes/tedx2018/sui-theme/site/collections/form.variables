@@ -1,0 +1,7 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@inputBorderRadius: 0;
+@inputBorder: none;
+@inputBoxShadow: none;

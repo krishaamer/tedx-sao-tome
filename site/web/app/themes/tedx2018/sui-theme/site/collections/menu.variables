@@ -1,0 +1,53 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@minHeight: 2rem;
+@borderWidth: 0;
+@borderRadius: 0;
+@boxShadow: none;
+@border: none;
+@margin: 0;
+@dividerBackground: none;
+@dividerSize: 0;
+@verticalDividerBackground: none;
+@background: none;
+@verticalBackground: none;
+@itemTextColor: @black;
+@selectedTextColor: @black;
+@subMenuDistance: 0.5rem;
+@itemHorizontalPadding: 1rem;
+@subMenuMargin: @subMenuDistance -@itemHorizontalPadding @subMenuDistance;
+@activeHoverItemBackground: none;
+@activeHoverItemColor: @black;
+@activeItemBackground: none;
+@secondaryActiveItemBackground: none;
+
+/* subMenu */
+
+@subMenuMargin: 0;
+@subMenuVerticalPadding: 0 !important;
+@subMenuHorizontalPadding: 0 !important;
+@subMenuTextColor: @black;
+@secondaryMenuSubMenuItemMargin: 0;
+@secondaryMenuSubMenuItemPadding: 0;
+@subMenuActiveFontWeight: 500;
+@subMenuFontSize: 0.9375rem;
+@massive: 1.375rem;
+
+/* Inverted */
+@invertedItemTextColor: @white;
+@secondaryInvertedColor: @white;
+@secondaryInvertedActiveColor: @white;
+@secondaryInvertedHoverColor: @white;
+@invertedSubMenuHoverColor: @white;
+@invertedActiveColor: @white;
+@invertedLightTextColor: @white;
+@invertedSubMenuColor: @white;
+@invertedHoverBackground: none;
+@invertedActiveBackground: none;
+@invertedActiveHoverColor: @white;
+@invertedArrowActiveHoverColor: @white;
+
+/* Sidebar */
+@itemVerticalPadding: 0.675rem;

@@ -1,0 +1,38 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*--------------
+      Meta
+---------------*/
+
+.ui.cards > .card .meta,
+.ui.card .meta {
+  font-size: @metaFontSize;
+  color: @metaColor;
+  text-transform: @metaTextTransform;
+}
+.ui.cards > .card .meta *,
+.ui.card .meta * {
+  margin-right: @metaSpacing;
+}
+.ui.cards > .card .meta :last-child,
+.ui.card .meta :last-child {
+  margin-right: 0em;
+}
+
+.ui.cards > .card .meta [class*="right floated"],
+.ui.card .meta [class*="right floated"] {
+  margin-right: 0em;
+  margin-left: @metaSpacing;
+}
+
+/* Default Header Size */
+.ui.cards > .card > .content > .header:not(.ui),
+.ui.card > .content > .header:not(.ui) {
+  font-weight: @headerFontWeight;
+  font-size: @headerFontSize;
+  margin-top: @headerLineHeightOffset;
+  line-height: @headerLineHeight;
+  word-wrap: @headerWordWrap;
+}

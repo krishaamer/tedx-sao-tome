@@ -1,0 +1,78 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+/* Green */
+.ui.inverted.green.menu {
+  background-color: @grey;
+}
+.ui.inverted.menu .green.active.item {
+  background-color: @green;
+}
+
+.ui.inverted.green.menu .item:before {
+  background-color: @green;
+}
+.ui.inverted.green.menu .active.item {
+  background-color: @green !important;
+}
+
+/* Grey */
+.ui.inverted.menu .grey.active.item,
+.ui.inverted.grey.menu {
+  background-color: @grey;
+}
+.ui.inverted.grey.menu .item:before {
+  background-color: @grey;
+}
+.ui.inverted.grey.menu .active.item {
+  background-color: @grey;
+}
+
+.ui.menu .grey.active.item,
+.ui.grey.menu .active.item {
+  border-color: @grey;
+  color: @grey;
+}
+
+/* Border */
+.ui.menu .item:before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  right: 0px;
+  height: 100%;
+
+  width: 0;
+  background: @dividerBackground;
+}
+
+/*--- Active ---*/
+.ui.menu .active.item  {
+  background: @activeItemBackground;
+  color: @activeItemTextColor;
+  font-weight: @activeItemFontWeight;
+  box-shadow: @activeItemBoxShadow;
+  text-decoration: underline;
+}
+
+.ui.inverted.menu .active.item {
+  background: @invertedActiveBackground;
+  color: @invertedActiveColor;
+  text-decoration: underline;
+}
+
+/*--- Hover ---*/
+.ui.link.inverted.menu .item:hover,
+.ui.inverted.menu .dropdown.item:hover,
+.ui.inverted.menu .link.item:hover,
+.ui.inverted.menu a.item:hover {
+  background: @invertedHoverBackground;
+  color: @invertedHoverColor;
+}
+.ui.vertical.inverted.menu .item .menu a.item:hover,
+.ui.vertical.inverted.menu .item .menu .link.item:hover {
+  background: @invertedSubMenuBackground;
+  color: @invertedSubMenuHoverColor;
+  text-decoration: underline;
+}

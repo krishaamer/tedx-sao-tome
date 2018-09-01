@@ -1,0 +1,10 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@selectionListBackground: none:
+@selectionListHoverBackground: none;
+@selectionListItemHorizontalPadding: 1.5rem;
+@itemHeaderColor: @black;
+@relativeBig: 1.375rem;
+@selectionListColor: @black;
