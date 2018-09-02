@@ -1,6 +1,6 @@
 <div class="ui section past" id="past">
 	<div class="ui container">
-		<div class="ui four column grid">
+		<div class="ui four column stackable doubling grid">
 			<div class="column">
 				<img class="ui fluid image" alt="Logo" src="@asset('images/2013.jpg')">
 				<div class="ui black header">TEDxSãoTomé 2013</div>

@@ -1,5 +1,76 @@
 <div class="ui section speakers" id="speakers">
 	<div class="ui container">
-		<h2 class="ui black">Speakers & Performers</h2>
+		<h2 class="ui black">Oradores</h2>
+		<div class="ui three column relaxed stackable doubling grid">
+			<div class="row" style="padding-bottom: 2rem;">
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="image">
+							<img src="@asset('images/speakers/estrela-matilde.jpg')">
+						</div>
+					</div>
+				</div>
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+				<div class="middle aligned column">
+					<div class="ui fluid card">
+						<div class="center aligned image">
+							<i class="massive red question icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 	<div class="ui fluid container black background">
 		<div class="ui container">
 
-			<div class="ui three column grid">
+			<div class="ui three column stackable doubling grid">
 
 				<div class="column">
 					<img class="ui small image" alt="Logo" src="@asset('images/tedxsaotome-logo.svg')">
@@ -17,8 +17,8 @@
 					<div class="ui black mini inverted menu">
 						<a class="fitted item" href="#about">Sobre TEDx</a>
 						<a class="item" href="#speakers">Oradores</a>
-						<a class="fitted item" href="#team">Equipe</a>
-						<a class="item" href="#sponsors">Parceiros</a>
+						<!--<a class="fitted item" href="#team">Equipe</a>
+						<a class="item" href="#sponsors">Parceiros</a>-->
 					</div>
 				</div>
 				<div class="column">
