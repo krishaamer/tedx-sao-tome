@@ -1,8 +1,20 @@
 <div class="ui section sponsors" id="sponsors">
-	<div class="ui fluid container grey">
-		<div class="ui basic centered segment">
-			<div class="ui header">Apoios</div>
+	<div class="ui fluid container grey background">
+		<div class="ui container">
+			<div class="ui basic centered center aligned segment">
+				<div class="ui small grey header">Apoios</div>
+			</div>
+			<div class="ui basic centered center aligned segment">
+				<div class="ui small grey header">Parceiros midia</div>
+			</div>
+			<div class="ui basic centered center aligned segment">
+				<div class="ui small header">
+					<span class="ui small grey header">Want to be a part of our partner?</span>
+					<span class="ui small red header">
+						<a href="mailto:">become a partner</a>
+					</span>
+				</span>
+			</div>
 		</div>
-		Want to be a part of our partner? <a href="mailto:">become a partner</a>
 	</div>
 </div>

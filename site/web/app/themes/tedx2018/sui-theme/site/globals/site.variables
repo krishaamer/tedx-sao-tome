@@ -13,7 +13,7 @@
 @absoluteBorderRadius: 0;
 
 @green: #00d2a0;
-@grey: #eaeaea;
+@grey: #46464b;
 @black: #000000;
 
 @h1: 5.625rem;
