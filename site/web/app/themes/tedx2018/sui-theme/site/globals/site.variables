@@ -3,9 +3,9 @@
 *******************************/
 
 @importGoogleFonts: false;
-@fontName: "ITCFranklinGothic";
-@headerFont: "ITCFranklinGothic";
-@pageFont: "ITCFranklinGothic";
+@fontName: "Helvetica";
+@headerFont: "Helvetica";
+@pageFont: "Helvetica";
 @emSize: 16px;
 @fontSize: 16px;
 

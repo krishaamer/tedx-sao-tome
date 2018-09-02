@@ -1,5 +1,9 @@
-<?php
-	the_content();
-?>
-
-<div class="hero"></div>
+@include('partials.content.section.menu')
+@include('partials.content.section.hero')
+@include('partials.content.section.about')
+@include('partials.content.section.speakers')
+@include('partials.content.section.team')
+@include('partials.content.section.sponsors')
+@include('partials.content.section.tickets')
+@include('partials.content.section.past')
+@include('partials.content.section.footer')

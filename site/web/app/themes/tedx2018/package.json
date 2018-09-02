@@ -91,7 +91,6 @@
     "postcss-safe-parser": "~3.0",
     "resolve-url-loader": "~2.3.0",
     "rimraf": "~2.6",
-    "semantic-ui-less": "^2.3.3",
     "style-loader": "^0.22.1",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "~18.2.0",
@@ -106,6 +105,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "semantic-ui-less": "^2.3.3"
   }
 }

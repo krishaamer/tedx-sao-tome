@@ -2,6 +2,7 @@
     User Variable Overrides
 *******************************/
 
+@fontWeight: 700;
 @minHeight: 2rem;
 @borderWidth: 0;
 @borderRadius: 0;

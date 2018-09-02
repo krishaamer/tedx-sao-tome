@@ -1,10 +1,23 @@
-@import '../framework/semantic.less';
+@import '../framework/semantic';
+@import './section/hero';
+@import './section/about';
+@import './section/theme';
+@import './section/speakers';
+@import './section/team';
+@import './section/sponsors';
+@import './section/tickets';
+@import './section/past';
+@import './section/footer';
 
-.hero {
-  background: url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ui.container.black {
+  background: #000;
+}
+
+.ui.container.grey {
+  background: #f0f1f2;
 }

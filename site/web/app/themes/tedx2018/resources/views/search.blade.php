@@ -10,7 +10,7 @@
   @endif
 
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.content.content-search')
+    @include('partials.content.content')
   @endwhile
 
 @endsection
