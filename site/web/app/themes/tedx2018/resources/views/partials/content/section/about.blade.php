@@ -2,12 +2,7 @@
 	<div class="ui fluid container red background">
 		<div class="ui container what">
 			<div class="ui middle aligned stackable doubling relaxed grid">
-				<div class="three wide column">
-					<div class="ui vertical header">
-						— TED & TEDx
-					</div>
-				</div>
-				<div class="three wide column">
+				<div class="six wide column">
 					<h2 class="ui white text">O que é o TEDxSãoTomé?</h2>
 				</div>
 				<div class="six wide column">
