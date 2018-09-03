@@ -4,7 +4,7 @@ use Sober\Controller\Controller;
 
 class Sponsors extends Controller {
 
-	public static function show ($out = '') {
+	public static function show ($type = 'sponsors', $out = '') {
 
 		if (!function_exists('have_rows')) {
 			return false;
