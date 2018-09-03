@@ -1,10 +1,14 @@
 <?php
-namespace App;
+namespace App\Controllers;
 use Sober\Controller\Controller;
 
 class Sponsors extends Controller {
 
 	public static function show ($out = '') {
+
+		if (!function_exists('have_rows')) {
+			return false;
+		}
 
 		if (have_rows($type, 'option')) {
 			while (have_rows($type, 'option')) { 
@@ -23,3 +27,4 @@ class Sponsors extends Controller {
 		echo $out;
 	}
 }
+?>
