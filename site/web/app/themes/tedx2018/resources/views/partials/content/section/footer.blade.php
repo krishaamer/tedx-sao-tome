@@ -34,9 +34,9 @@
 						<a href="https://twitter.com/tedxsaotome" target="_blank" class="ui twitter icon button">
 							<i class="twitter icon"></i>
 						</a>
-						<!--<a class="ui youtube icon button">
+						<a href="https://www.youtube.com/results?search_query=tedxsaotome" target="_blank" class="ui youtube icon button">
 							<i class="youtube icon"></i>
-						</a>-->
+						</a>
 					</div>
 				</div>
 
