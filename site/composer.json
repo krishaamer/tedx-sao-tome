@@ -40,7 +40,7 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-config": "1.0.0",
-    "wpackagist-plugin/wordpress-seo":"8.1",
+    "wpackagist-plugin/wordpress-seo":"8.1.1",
     "wpackagist-plugin/shortpixel-image-optimiser":"dev-trunk",
     "wpackagist-plugin/simple-history": "2.27",
     "roots/soil": "^3.7"
