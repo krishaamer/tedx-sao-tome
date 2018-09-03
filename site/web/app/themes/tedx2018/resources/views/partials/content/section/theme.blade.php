@@ -8,14 +8,12 @@
 					<p class="ui white text"></p>
 					<div class="ui two column grid">
 						<div class="column">
-							<div class="ui red header">Where</div>
-							<div class="ui small grey header">Museu Nacional</div>
-							<!--<div class="ui small grey header">São Tomé</div>-->
+							<div class="ui red header">Onde</div>
+							<div class="ui small grey header">Museu Nacional<br />São Tomé</div>
 						</div>
 						<div class="column">
-							<div class="ui red header">When</div>
-							<div class="ui small grey header">September 29th, 2018</div>
-							<!--<div class="ui small grey header">14:30 PM</div>-->
+							<div class="ui red header">Quando</div>
+							<div class="ui small grey header">29 de setembro de 2018<br />14h30</div>
 						</div>
 					</div>
 				</div>
