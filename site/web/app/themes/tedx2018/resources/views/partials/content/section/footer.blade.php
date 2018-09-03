@@ -10,8 +10,8 @@
 					<!--<div class="ui red header">Inscrever</div>-->
 				</div>
 				<div class="column">
-					<div class="ui red header">Contate-Nos</div>
-					<div class="ui grey text">info@tedxsaotome.com</div>
+					<!--<div class="ui red header">Contate-Nos</div>-->
+					<!--<div class="ui grey text">info@tedxsaotome.com</div>-->
 					<!--<div class="ui grey text">+239 902 231 16</div>-->
 					<div class="ui red header">Navegação</div>
 					<div class="ui black mini inverted menu">
