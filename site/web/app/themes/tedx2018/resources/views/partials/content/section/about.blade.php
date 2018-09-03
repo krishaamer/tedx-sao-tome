@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class="ui basic segment white background">
-		<div class="ui container what ted">
+		<div class="ui container ted">
 			<div class="ui two column stackable doubling relaxed grid">
 				<div class="column">
 					<div class="ui black header">Sobre TED</div>

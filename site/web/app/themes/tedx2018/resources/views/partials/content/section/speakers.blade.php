@@ -13,56 +13,56 @@
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
 				<div class="middle aligned column">
 					<div class="ui fluid card">
 						<div class="center aligned image">
-							<i class="massive red question icon"></i>
+							<i class="massive red question icon m4"></i>
 						</div>
 					</div>
 				</div>
