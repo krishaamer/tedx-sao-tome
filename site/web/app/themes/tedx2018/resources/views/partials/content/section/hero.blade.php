@@ -1,4 +1,4 @@
-<div class="ui section hero" id="hero">
+<div class="ui basic segment section hero" id="hero">
 	<div class="ui text container">
 		<div class="ui basic center aligned centered segment pt30vh">
 			<div class="ui header">

@@ -1,4 +1,4 @@
-<div class="ui section past" id="past">
+<div class="ui basic segment section past" id="past">
 	<div class="ui container">
 		<div class="ui four column stackable doubling grid">
 			<div class="column">

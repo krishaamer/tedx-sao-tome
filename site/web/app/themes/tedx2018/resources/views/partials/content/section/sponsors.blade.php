@@ -1,5 +1,5 @@
 <div class="ui section sponsors" id="sponsors">
-	<div class="ui fluid container grey background">
+	<div class="ui basic segment grey background">
 		<div class="ui container">
 			<div class="ui basic centered center aligned segment">
 				<div class="ui small grey header">Apoios</div>

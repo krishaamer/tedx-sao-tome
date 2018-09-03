@@ -1,4 +1,4 @@
-<div class="ui section by" id="by">
+<div class="ui basic segment  section by" id="by">
 	<div class="ui fluid container black background">
 		<div class="ui container">
 			<div class="ui grid">

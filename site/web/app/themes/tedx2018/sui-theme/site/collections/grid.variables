@@ -3,6 +3,3 @@
 *******************************/
 
 @columnCount: 12;
-@gutterWidth: 0;
-@celledPadding: 0;
-@rowSpacing: 0;

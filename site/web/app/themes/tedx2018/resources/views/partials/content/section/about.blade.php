@@ -1,5 +1,5 @@
 <div class="ui section about" id="about">
-	<div class="ui fluid container red background">
+	<div class="ui basic segment red background">
 		<div class="ui container what">
 			<div class="ui middle aligned stackable doubling relaxed grid">
 				<div class="six wide column">
@@ -11,7 +11,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="ui fluid container white background">
+	<div class="ui basic segment white background">
 		<div class="ui container what ted">
 			<div class="ui two column stackable doubling relaxed grid">
 				<div class="column">

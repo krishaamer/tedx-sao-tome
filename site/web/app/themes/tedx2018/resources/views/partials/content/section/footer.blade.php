@@ -1,5 +1,5 @@
 <div class="ui section footer" id="footer">
-	<div class="ui fluid container black background">
+	<div class="ui basic segment">
 		<div class="ui container">
 
 			<div class="ui three column stackable doubling grid">
@@ -41,7 +41,6 @@
 				</div>
 
 			</div>
-
 		</div>
 	</div>
 </div>

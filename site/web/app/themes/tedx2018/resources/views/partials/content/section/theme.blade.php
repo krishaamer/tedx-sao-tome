@@ -1,5 +1,5 @@
-<div class="ui section theme" id="theme">
-	<div class="ui fluid container black background" style="padding: 5rem 0;">
+<div class="ui basic segment section theme" id="theme">
+	<div class="ui basic segment black background">
 		<div class="ui container">
 			<div class="ui two column relaxed stackable doubling grid">
 				<div class="column">

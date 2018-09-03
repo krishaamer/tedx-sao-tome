@@ -1,2 +1,2 @@
-<div class="ui section team" id="team">
+<div class="ui basic segment section team" id="team">
 </div>
