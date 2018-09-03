@@ -1,6 +1,6 @@
 <div class="ui section speakers" id="speakers">
 	<div class="ui container">
-		<h2 class="ui black">Oradores</h2>
+		<h2 class="ui black">Oradores do TEDxSãoTomé 2018</h2>
 		<div class="ui three column relaxed stackable doubling grid">
 			<div class="row" style="padding-bottom: 2rem;">
 				<div class="middle aligned column">

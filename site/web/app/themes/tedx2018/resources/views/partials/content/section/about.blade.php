@@ -21,13 +21,15 @@
 			<div class="ui two column stackable doubling relaxed grid">
 				<div class="column">
 					<div class="ui black header">Sobre TED</div>
-					<p class="ui grey text">TED is a nonprofit organization devoted to “ideas worth spreading”. Started in 1984 in California as a four-day conference about Technology, Entertainment, Design, TED has broadened its scope and grown to support those world-changing ideas with multiple initiatives. At TED, the world’s leading thinkers and doers are asked to give the talk of their lives in a maximum of 18 minutes. Talks are then made available for free at TED.com.</p>
+					<p class="ui grey text">
+						<p><span style="color: #f51818;">TED</span>&nbsp;- é uma organização sem fins lucrativos devotada a "Ideias Que Merecem Ser Espalhadas". Surgiu em 1984 como uma conferência anual na Califórnia e já teve entre seus palestrantes Bill Clinton, Paul Simon, Bill Gates, Bono Vox, Al Gore, Michelle Obama e Philippe Starck. A Conferência TED anual acontece em Long Beach, Califórnia.</p><p>Mais de 700 das palestras estão disponíveis gratuitamente no site TED.com e já foram acessadas por milhões de pessoas do mundo todo. A sigla TED significa Tecnologia, Entretenimento e Design.</p><p>Os principais e primeiros campos criativos e de pesquisa que foram escolhidos para representar possíveis melhorias de futuro. Hoje a discussão cresceu para os mais diversos campos, como educação, ciências, negócios, artes e questões globais. O que está em jogo realmente é o poder de transformar e melhorar o futuro, não importando formações.</p><p><span style="color: #f51818;">TEDx</span>&nbsp;- No espírito das ideias que merecem ser espalhadas, o TED criou o programa chamado TEDx. O TEDx é um programa de eventos locais, e organizados de forma independente, que reúne pessoas para dividir uma experiência ao estilo TED. Nos eventos TEDx a combinação de palestras ao vivo, vídeos de TEDTalks e performances artísticas combinam para despertar conversas e conexões profundas.</p><p>Os eventos TEDx são inteiramente planejados e coordenados de forma independente, baseados num espírito comunitário e sem fins lucrativos.</p><p></p>
+					</p>
 				</div>
 				<div class="column">
 					<div class="ui header">
-						<span class="ui black text">Sobre TEDx,</span><span class="ui small red text"> x </span><span class="ui small grey text">= independently organized event</span>
+						<span class="ui black text">Sobre TEDxSãoTomé,</span><span class="ui small red text"> x </span><span class="ui small grey text">= independently organized event</span>
 					</div>
-					<p class="ui grey text">In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxLausanne, where x = independently organized TED event. At our TEDxLausanne event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
+					<p class="ui grey text">O TEDxSãoTomé foi criado no espírito de missão TED, “ideias que merecem ser partilhadas”. O programa foi criado para oferecer às comunidades, organizações e indivíduos em e de São Tomé e Príncipe, a oportunidade de promover o diálogo através de experiências TED no país.</p>
 				</div>
 			</div>
 		</div>

@@ -10,10 +10,10 @@
 					<!--<div class="ui red header">Inscrever</div>-->
 				</div>
 				<div class="column">
-					<div class="ui red header">Contact Us</div>
+					<div class="ui red header">Contate-Nos</div>
 					<div class="ui grey text">info@tedxsaotome.com</div>
-					<div class="ui grey text">+239 902 231 16</div>
-					<div class="ui red header">Navigation</div>
+					<!--<div class="ui grey text">+239 902 231 16</div>-->
+					<div class="ui red header">Navegação</div>
 					<div class="ui black mini inverted menu">
 						<a class="fitted item" href="#about">Sobre TEDx</a>
 						<a class="item" href="#speakers">Oradores</a>
@@ -23,7 +23,7 @@
 				</div>
 				<div class="column">
 					<div class="ui red header">Social</div>
-					<div class="ui grey text">Follow us on social media to receive updates about the event.</div>
+					<div class="ui grey text">Siga-nos nas mídias sociais para receber atualizações sobre o evento.</div>
 					<div class="ui buttons pt1">
 						<a href="https://www.facebook.com/tedxsaotome" target="_blank" class="ui facebook icon button">
 							<i class="facebook icon"></i>
