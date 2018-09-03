@@ -25,18 +25,18 @@
 					<div class="ui red header">Social</div>
 					<div class="ui grey text">Follow us on social media to receive updates about the event.</div>
 					<div class="ui buttons pt1">
-						<a class="ui facebook icon button">
+						<a href="https://www.facebook.com/tedxsaotome" target="_blank" class="ui facebook icon button">
 							<i class="facebook icon"></i>
 						</a>
-						<a class="ui instagram icon button">
+						<a href="https://www.instagram.com/tedxsaotome/" target="_blank" class="ui instagram icon button">
 							<i class="instagram icon"></i>
 						</a>
-						<a class="ui twitter icon button">
+						<a href="https://twitter.com/tedxsaotome" target="_blank" class="ui twitter icon button">
 							<i class="twitter icon"></i>
 						</a>
-						<a class="ui youtube icon button">
+						<!--<a class="ui youtube icon button">
 							<i class="youtube icon"></i>
-						</a>
+						</a>-->
 					</div>
 				</div>
 
