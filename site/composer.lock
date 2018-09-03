@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c41521296684d42166c209ec5ae45c08",
+    "content-hash": "93480ccc69d005229b81d44ebc529bcf",
     "packages": [
         {
             "name": "composer/installers",
@@ -491,6 +491,27 @@
             "time": "2018-07-29T20:33:41+00:00"
         },
         {
+            "name": "wpackagist-plugin/safe-svg",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-svg/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.zip?timestamp=1521330285",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-svg/",
+            "time": "2018-03-17T23:44:45+00:00"
+        },
+        {
             "name": "wpackagist-plugin/shortpixel-image-optimiser",
             "version": "dev-trunk",
             "source": {
@@ -781,6 +802,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "wpackagist-plugin/shortpixel-image-optimiser": 20,
+        "wpackagist-plugin/safe-svg": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

@@ -43,6 +43,7 @@
     "wpackagist-plugin/wordpress-seo":"8.1.1",
     "wpackagist-plugin/shortpixel-image-optimiser":"dev-trunk",
     "wpackagist-plugin/simple-history": "2.27",
+    "wpackagist-plugin/safe-svg":"dev-trunk",
     "roots/soil": "^3.7"
   },
   "require-dev": {
