@@ -15,8 +15,8 @@
 					<!--<div class="ui grey text">+239 902 231 16</div>-->
 					<div class="ui red header">Navegação</div>
 					<div class="ui black mini inverted menu">
-						<a class="fitted item" href="#about">Sobre TEDx</a>
-						<a class="item" href="#speakers">Oradores</a>
+						<a class="fitted item" href="/#about">Sobre TEDx</a>
+						<a class="item" href="/#speakers">Oradores</a>
 						<!--<a class="fitted item" href="#team">Equipe</a>
 						<a class="item" href="#sponsors">Parceiros</a>-->
 					</div>
