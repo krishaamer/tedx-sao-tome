@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "15c5d4d583f24c0453d29a1e9c9cd43d",
+    "content-hash": "0b69b4b412a275e426c9c1f65c85504c",
     "packages": [
         {
             "name": "composer/installers",
@@ -592,6 +592,27 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-email-template",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-email-template/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-email-template.zip?timestamp=1529651645",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-email-template/",
+            "time": "2018-06-22T07:14:05+00:00"
         }
     ],
     "packages-dev": [
@@ -825,6 +846,7 @@
         "wpackagist-plugin/shortpixel-image-optimiser": 20,
         "wpackagist-plugin/safe-svg": 20,
         "wpackagist-plugin/ninja-forms": 20,
+        "wpackagist-plugin/wp-email-template": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
