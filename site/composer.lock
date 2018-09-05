@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "93480ccc69d005229b81d44ebc529bcf",
+    "content-hash": "15c5d4d583f24c0453d29a1e9c9cd43d",
     "packages": [
         {
             "name": "composer/installers",
@@ -491,6 +491,27 @@
             "time": "2018-07-29T20:33:41+00:00"
         },
         {
+            "name": "wpackagist-plugin/ninja-forms",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ninja-forms/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.zip?timestamp=1535724664",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ninja-forms/",
+            "time": "2018-08-31T14:11:04+00:00"
+        },
+        {
             "name": "wpackagist-plugin/safe-svg",
             "version": "dev-trunk",
             "source": {
@@ -803,6 +824,7 @@
     "stability-flags": {
         "wpackagist-plugin/shortpixel-image-optimiser": 20,
         "wpackagist-plugin/safe-svg": 20,
+        "wpackagist-plugin/ninja-forms": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

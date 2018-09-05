@@ -44,6 +44,7 @@
     "wpackagist-plugin/shortpixel-image-optimiser":"dev-trunk",
     "wpackagist-plugin/simple-history": "2.27",
     "wpackagist-plugin/safe-svg":"dev-trunk",
+    "wpackagist-plugin/ninja-forms":"dev-trunk",
     "roots/soil": "^3.7"
   },
   "require-dev": {
