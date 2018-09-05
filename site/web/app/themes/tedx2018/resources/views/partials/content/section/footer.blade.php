@@ -17,8 +17,11 @@
 					<div class="ui black mini inverted menu">
 						<a class="fitted item" href="/#about">Sobre TEDx</a>
 						<a class="item" href="/#speakers">Oradores</a>
-						<!--<a class="fitted item" href="#team">Equipe</a>
-						<a class="item" href="#sponsors">Parceiros</a>-->
+						<a class="fitted item" href="#sponsors">Parceiros
+						<a class="item" href="#register">Inscrever</a>
+						<!--
+							<a class="fitted item" href="#team">Equipe</a>
+						</a>-->
 					</div>
 				</div>
 				<div class="column">

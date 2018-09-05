@@ -5,10 +5,8 @@
 				<span class="ui hero date">29.09.2018</span><span class="ui hero vertical bar"> | <span class="ui hero location">MUSEU NACIONAL</span>
 			</div>
 		</div>
-		<!--
 		<div class="ui basic center aligned centered segment">
-			<button class="ui large red button">Inscrever</button>
+			<a href="/#register" class="ui large red button">Inscrever</a>
 		</div>
-		-->
 	</div>
 </div>
