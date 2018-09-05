@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b69b4b412a275e426c9c1f65c85504c",
+    "content-hash": "b5b22892fde83b2fc345396887ecec05",
     "packages": [
         {
             "name": "composer/installers",
@@ -491,6 +491,27 @@
             "time": "2018-07-29T20:33:41+00:00"
         },
         {
+            "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-analytics-dashboard-for-wp/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip?timestamp=1528818084",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-analytics-dashboard-for-wp/",
+            "time": "2018-06-12T15:41:24+00:00"
+        },
+        {
             "name": "wpackagist-plugin/ninja-forms",
             "version": "dev-trunk",
             "source": {
@@ -847,6 +868,7 @@
         "wpackagist-plugin/safe-svg": 20,
         "wpackagist-plugin/ninja-forms": 20,
         "wpackagist-plugin/wp-email-template": 20,
+        "wpackagist-plugin/google-analytics-dashboard-for-wp": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
