@@ -5,7 +5,7 @@
 		<div class="ui container what">
 			<div class="ui middle aligned stackable doubling relaxed grid">
 				<div class="six wide column">
-					<h2 class="ui white text">Estrela Matilde</h2>
+					<h2 class="ui white text">{{ get_the_title() }}</h2>
 				</div>
 				<div class="six wide column">
 					<h4 class="ui white text"></h4>
@@ -22,7 +22,7 @@
 				<div class="column">
 					<div class="ui fluid card">
 						<div class="image">
-							<img src="@asset('images/speakers/estrela-matilde.jpg')">
+							@php the_post_thumbnail('full') @endphp
 						</div>
 					</div>
 				</div>
