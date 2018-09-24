@@ -3,6 +3,5 @@
 @include('partials.content.section.theme')
 @include('partials.content.section.about')
 @include('partials.content.section.speakers')
-@include('partials.content.section.register')
 @include('partials.content.section.sponsors')
 @include('partials.content.section.footer')
