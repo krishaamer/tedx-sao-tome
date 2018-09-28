@@ -8,6 +8,7 @@
 		<div class="right menu">
 			<a class="item" href="/#about">Sobre TEDx</a>
 			<a class="item" href="/#speakers">Oradores</a>
+			<a class="item" href="/#programme">Programa</a>
 			<a class="item" href="/#sponsors">Parceiros</a>
 			<!--<a class="item" href="/#register">Inscrever</a>
 			<a class="item" href="#team">Equipe</a>-->
