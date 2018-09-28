@@ -2,7 +2,7 @@
 	<div class="ui text container">
 		<div class="ui basic center aligned centered segment pt30vh">
 			<div class="ui header">
-				<span class="ui hero date">29.09.2018</span><span class="ui hero vertical bar"> | <span class="ui hero location">MUSEU NACIONAL</span>
+				<span class="ui hero date">29.09.2018</span><span class="ui hero vertical bar"> | <span class="ui hero location">CACAU</span>
 			</div>
 		</div>
 		<!--<div class="ui basic center aligned centered segment">
