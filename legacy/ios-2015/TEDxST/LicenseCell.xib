@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="LicenseCell" id="tRY-CQ-JxP" userLabel="LicenseCell" customClass="LicenseCell" customModule="TEDxST">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tRY-CQ-JxP" id="myX-yb-qMh">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MD-On-SAw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2ar-G5-dSy">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-PN-n1F" userLabel="Title">
+                                    <rect key="frame" x="15" y="11" width="560" height="24"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="Mon-00-4O8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeZ-gf-WlB" userLabel="License">
+                                    <rect key="frame" x="15" y="43" width="570" height="148"/>
+                                    <animations/>
+                                    <mutableString key="text">License text lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius mauris quis mauris egestas aliquam. Suspendisse non aliquam neque, eget ullamcorper dui. Cras tincidunt, felis id sodales lacinia, nulla nunc venenatis urna, ut tristique urna nibh vitae nulla. Nam ut nisi eget turpis facilisis mollis eget a lorem. Suspendisse eget lectus ut elit auctor eleifend congue in turpis. Nullam a tristique tellus. Integer at massa id mauris volutpat vestibulum. Cras tortor quam, aliquet eget sagittis a, sagittis porttitor odio.</mutableString>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstItem="poZ-PN-n1F" firstAttribute="leading" secondItem="2ar-G5-dSy" secondAttribute="leading" constant="15" id="2vO-RH-3vh"/>
+                                <constraint firstItem="xeZ-gf-WlB" firstAttribute="leading" secondItem="2ar-G5-dSy" secondAttribute="leading" constant="15" id="L8U-h9-TRv"/>
+                                <constraint firstItem="xeZ-gf-WlB" firstAttribute="bottom" secondItem="2ar-G5-dSy" secondAttribute="bottomMargin" id="Lf3-Y4-Dbw"/>
+                                <constraint firstAttribute="trailing" secondItem="xeZ-gf-WlB" secondAttribute="trailing" constant="15" id="N7e-do-6GX"/>
+                                <constraint firstItem="xeZ-gf-WlB" firstAttribute="leading" secondItem="poZ-PN-n1F" secondAttribute="leading" id="eKq-Ld-NIW"/>
+                                <constraint firstItem="xeZ-gf-WlB" firstAttribute="top" secondItem="poZ-PN-n1F" secondAttribute="bottom" constant="8" id="i1D-4c-g7U"/>
+                                <constraint firstItem="poZ-PN-n1F" firstAttribute="top" secondItem="2ar-G5-dSy" secondAttribute="top" constant="11" id="udY-Ui-v9K"/>
+                                <constraint firstAttribute="trailing" secondItem="poZ-PN-n1F" secondAttribute="trailing" constant="25" id="yK2-Es-Why"/>
+                            </constraints>
+                        </view>
+                        <animations/>
+                        <blurEffect style="dark"/>
+                    </visualEffectView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="0MD-On-SAw" firstAttribute="top" secondItem="myX-yb-qMh" secondAttribute="top" id="DIG-FK-C1m"/>
+                    <constraint firstAttribute="trailing" secondItem="0MD-On-SAw" secondAttribute="trailing" id="Gyf-ln-5Lx"/>
+                    <constraint firstAttribute="bottom" secondItem="0MD-On-SAw" secondAttribute="bottom" id="MFe-NT-9tt"/>
+                    <constraint firstItem="0MD-On-SAw" firstAttribute="leading" secondItem="myX-yb-qMh" secondAttribute="leading" id="tXc-be-9pQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="license" destination="xeZ-gf-WlB" id="OeM-Oj-XW4"/>
+                <outlet property="title" destination="poZ-PN-n1F" id="jYK-sN-CSD"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="-75"/>
+        </tableViewCell>
+    </objects>
+</document>

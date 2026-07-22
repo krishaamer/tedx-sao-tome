@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="89r-f2-et9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Speaker List Nav-->
+        <scene sceneID="d8o-rP-UWq">
+            <objects>
+                <navigationController title="Oradores" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="SfK-tn-3og" userLabel="Speaker List Nav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="pbO-FI-vDB"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2Xx-h9-jlu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lb6-KP-n7Q">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="lNr-Yy-oYd" kind="relationship" relationship="rootViewController" id="Dd4-Tv-Nhl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-G3-ska" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-505" y="733"/>
+        </scene>
+        <!--Oradores-->
+        <scene sceneID="J92-Uc-JyA">
+            <objects>
+                <tableViewController modalTransitionStyle="flipHorizontal" id="lNr-Yy-oYd" customClass="SpeakerListController" customModule="TEDxST" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wsc-u5-yci">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="SpeakerCell" rowHeight="48" id="I0B-Fi-wj8" customClass="SpeakerCell" customModule="TEDxST" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="I0B-Fi-wj8" id="lxt-EG-eWz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="gMb-QX-vnz" kind="presentation" identifier="speakers" id="jRS-hZ-b6k"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lNr-Yy-oYd" id="lfA-X3-R7Y"/>
+                            <outlet property="delegate" destination="lNr-Yy-oYd" id="c6L-DT-c3p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Oradores" id="gwp-Ry-acY"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="WYy-Md-EjC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </refreshControl>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="objectsPerPage">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="pullToRefreshEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="loadingViewEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="paginationEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgu-HB-elj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="670"/>
+        </scene>
+        <!--Orador-->
+        <scene sceneID="F8g-Kz-a9G">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" title="Orador" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="gMb-QX-vnz" customClass="SpeakerDetailViewController" customModule="TEDxST" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pf0-VF-xq9"/>
+                        <viewControllerLayoutGuide type="bottom" id="JR0-q7-Rig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rUj-zd-RTU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDm-Ew-TVG" userLabel="Image" customClass="PFImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="How I made my dream com true and then I did some other stuff on the second line" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ne-HY-Lfe" userLabel="Title" customClass="RDLabel" customModule="TEDxST" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="251" width="600" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="X0W-UV-RFM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius mauris quis mauris egestas aliquam. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="33" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FL8-v0-wFc" userLabel="Bio" customClass="RDLabel" customModule="TEDxST" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="301" width="600" height="250"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="pnP-JD-t1P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Roselyn Silva" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-MP-TrO" userLabel="Name" customClass="BigLabel" customModule="TEDxST" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="191" width="600" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="feR-dd-iaK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="9Ne-HY-Lfe" firstAttribute="leading" secondItem="g9h-MP-TrO" secondAttribute="leading" id="3Sv-eZ-eNf"/>
+                            <constraint firstItem="FL8-v0-wFc" firstAttribute="leading" secondItem="rUj-zd-RTU" secondAttribute="leading" id="3WJ-Ud-uaW"/>
+                            <constraint firstItem="JR0-q7-Rig" firstAttribute="top" secondItem="FL8-v0-wFc" secondAttribute="bottom" id="3dD-EE-hT5"/>
+                            <constraint firstItem="9Ne-HY-Lfe" firstAttribute="trailing" secondItem="g9h-MP-TrO" secondAttribute="trailing" id="7OD-BE-fXX"/>
+                            <constraint firstItem="9Ne-HY-Lfe" firstAttribute="width" secondItem="FL8-v0-wFc" secondAttribute="width" id="Am6-Qn-i1a"/>
+                            <constraint firstItem="pDm-Ew-TVG" firstAttribute="top" secondItem="rUj-zd-RTU" secondAttribute="topMargin" id="CHS-nq-ZaC"/>
+                            <constraint firstItem="9Ne-HY-Lfe" firstAttribute="top" secondItem="g9h-MP-TrO" secondAttribute="bottom" constant="-10" id="Sww-1b-wvk"/>
+                            <constraint firstItem="g9h-MP-TrO" firstAttribute="width" secondItem="9Ne-HY-Lfe" secondAttribute="width" id="VLa-8V-mVu"/>
+                            <constraint firstItem="FL8-v0-wFc" firstAttribute="trailing" secondItem="rUj-zd-RTU" secondAttribute="trailing" id="Wgx-UN-NOH"/>
+                            <constraint firstItem="FL8-v0-wFc" firstAttribute="leading" secondItem="9Ne-HY-Lfe" secondAttribute="leading" id="XGE-bW-6cr"/>
+                            <constraint firstItem="FL8-v0-wFc" firstAttribute="trailing" secondItem="9Ne-HY-Lfe" secondAttribute="trailing" id="blt-cm-v7Z"/>
+                            <constraint firstAttribute="trailing" secondItem="pDm-Ew-TVG" secondAttribute="trailing" id="ceU-ad-jiu"/>
+                            <constraint firstItem="pDm-Ew-TVG" firstAttribute="leading" secondItem="rUj-zd-RTU" secondAttribute="leading" id="eA3-pi-D9u"/>
+                            <constraint firstItem="FL8-v0-wFc" firstAttribute="top" secondItem="9Ne-HY-Lfe" secondAttribute="bottom" id="gEk-Gj-Zb3"/>
+                            <constraint firstItem="JR0-q7-Rig" firstAttribute="top" secondItem="pDm-Ew-TVG" secondAttribute="bottom" id="wv3-o6-Fkb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Orador" id="rHT-8K-RCm">
+                        <barButtonItem key="rightBarButtonItem" title="Fechar" id="GGS-WH-7K3"/>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="dismissModalBtn" destination="GGS-WH-7K3" id="yha-P5-zzO"/>
+                        <outlet property="speakerBio" destination="FL8-v0-wFc" id="Eag-ZM-j2z"/>
+                        <outlet property="speakerImageBig" destination="pDm-Ew-TVG" id="3td-HQ-mlL"/>
+                        <outlet property="speakerName" destination="g9h-MP-TrO" id="jEs-5n-AEf"/>
+                        <outlet property="speakerTalkTitle" destination="9Ne-HY-Lfe" id="ggA-l5-6w7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyR-B8-vC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="670"/>
+        </scene>
+        <!--Sobre-->
+        <scene sceneID="agi-31-R52">
+            <objects>
+                <tableViewController title="Sobre" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="u7L-Xp-RBr" customClass="TeamListController" customModule="TEDxST" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z9r-8i-b6g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCell" rowHeight="300" id="h1H-0J-9Bx" customClass="TeamCell">
+                                <rect key="frame" x="0.0" y="86" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h1H-0J-9Bx" id="Oet-9G-0Lk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u7L-Xp-RBr" id="yoG-d0-o8V"/>
+                            <outlet property="delegate" destination="u7L-Xp-RBr" id="5kH-md-wK7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Equipa" id="0ap-N8-qBk">
+                        <barButtonItem key="rightBarButtonItem" title="Licenças" id="RSO-5C-fWt">
+                            <connections>
+                                <segue destination="gfP-E4-6hp" kind="presentation" identifier="licenses" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="qOv-Ka-9AS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBl-wN-alQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="1425"/>
+        </scene>
+        <!--Licenças-->
+        <scene sceneID="gyd-DF-AEU">
+            <objects>
+                <navigationController title="Licenças" id="gfP-E4-6hp" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="hYj-bd-ADz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nhu-Jf-83X" kind="relationship" relationship="rootViewController" id="53m-R2-su2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IL5-6Q-JXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="941"/>
+        </scene>
+        <!--Licenças-->
+        <scene sceneID="ge6-kR-gL2">
+            <objects>
+                <tableViewController title="Licenças" id="Nhu-Jf-83X" customClass="LicenseListController" customModule="TEDxST" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZTv-Ue-id5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LicenseCell" rowHeight="300" id="M45-C9-arF" customClass="LicenseCell">
+                                <rect key="frame" x="0.0" y="86" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M45-C9-arF" id="jSE-gl-ofG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nhu-Jf-83X" id="KZR-Mg-ZqA"/>
+                            <outlet property="delegate" destination="Nhu-Jf-83X" id="S6X-o6-EFM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Licenças" id="NvA-Ec-b6N">
+                        <barButtonItem key="rightBarButtonItem" title="Fechar" id="AJC-xr-WOk"/>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="dismissModalBtn" destination="AJC-xr-WOk" id="Qrb-0L-C62"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOx-EX-dW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3079" y="941"/>
+        </scene>
+        <!--Sobre-->
+        <scene sceneID="FdO-I2-ODF">
+            <objects>
+                <navigationController title="Sobre" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="ls8-y4-qTP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Ph7-5N-YYd"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="kSv-lt-32F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="u7L-Xp-RBr" kind="relationship" relationship="rootViewController" id="THh-Fy-QBN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3N8-XM-VSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="1425"/>
+        </scene>
+        <!--Evento-->
+        <scene sceneID="BmN-2w-14L">
+            <objects>
+                <viewController title="Evento" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="N7X-B5-bx9" customClass="EventViewController" customModule="TEDxST" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VZl-YE-WDr"/>
+                        <viewControllerLayoutGuide type="bottom" id="b43-Az-KmU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O5c-Bh-r62" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999997" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navegadores" translatesAutoresizingMaskIntoConstraints="NO" id="gqV-SS-DeB">
+                                <rect key="frame" x="0.0" y="-33" width="600" height="631"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-PS-3ZS" userLabel="ScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynh-xy-9vZ" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1459"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoY-BX-CUz">
+                                                <rect key="frame" x="8" y="23" width="584" height="1436"/>
+                                                <animations/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Data X 25 de Julho de 2015 Local X Biblioteca Nacional, São Tomé">
+                                                        <attributes>
+                                                            <color key="NSBackgroundColor" red="0.90196078430000004" green="0.16862745100000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="24" name="HelveticaNeue-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">
+
+Na sua terceira edição e sob o tema “Ponto Sem Retorno: Tudo e Nada, TEDxSãoTomé pretende chamar a atenção de todos. As apresentações dos nossos oradores e artistas, numa grande variedade de temáticas, pretendemos suscitar questões de grande relevância para São Tomé e Príncipe. 
+
+Junta-te a nós no dia 25 de Julho e assiste aos vídeos do TED e as atuações inspiradas na paixão que os nossos oradores têm pelo que fazem. Vem verificar as razões porque os nossos oradores têm esperança no futuro e o que se propuseram a discutir.
+
+TED - é uma organização sem fins lucrativos devotada a "Ideias Que Merecem Ser Espalhadas". Surgiu em 1984 como uma conferência anual na Califórnia e já teve entre seus palestrantes Bill Clinton, Paul Simon, Bill Gates, Bono Vox, Al Gore, Michelle Obama e Philippe Starck. A Conferência TED anual acontece em Long Beach, Califórnia.
+
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="24" name="HelveticaNeue-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">Mais de 700 das palestras estão disponíveis gratuitamente no site TED.com e já foram acessadas por milhões de pessoas do mundo todo. A sigla TED significa Tecnologia, Entretenimento e Design.
+
+Os principais e primeiros campos criativos e de pesquisa que foram escolhidos para representar possíveis melhorias de futuro. Hoje a discussão cresceu para os mais diversos campos, como educação, ciências, negócios, artes e questões globais. O que está em jogo realmente é o poder de transformar e melhorar o futuro, não importando formações.
+
+TEDx - No espírito das ideias que merecem ser espalhadas, o TED criou o programa chamado TEDx. O TEDx é um programa de eventos locais, e organizados de forma independente, que reúne pessoas para dividir uma experiência ao estilo TED. Nos eventos TEDx a combinação de palestras ao vivo, vídeos de TEDTalks e performances artísticas combinam para despertar conversas e conexões profundas.
+
+Os eventos TEDx são inteiramente planejados e coordenados de forma independente, baseados num espírito comunitário e sem fins lucrativos.</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="24" name="HelveticaNeue-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="NoY-BX-CUz" secondAttribute="trailing" id="3z4-5M-xum"/>
+                                            <constraint firstItem="NoY-BX-CUz" firstAttribute="top" secondItem="Ynh-xy-9vZ" secondAttribute="topMargin" constant="15" id="cVI-9G-fYb"/>
+                                            <constraint firstAttribute="bottom" secondItem="NoY-BX-CUz" secondAttribute="bottom" id="xF9-Yb-J5j"/>
+                                            <constraint firstItem="NoY-BX-CUz" firstAttribute="leading" secondItem="Ynh-xy-9vZ" secondAttribute="leadingMargin" id="xhB-lF-XOZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="Ynh-xy-9vZ" firstAttribute="leading" secondItem="gb2-PS-3ZS" secondAttribute="leading" id="6RR-Jn-VSJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ynh-xy-9vZ" secondAttribute="bottom" id="9LD-mb-1a9"/>
+                                    <constraint firstItem="Ynh-xy-9vZ" firstAttribute="top" secondItem="gb2-PS-3ZS" secondAttribute="top" id="axm-VW-8Gx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ynh-xy-9vZ" secondAttribute="trailing" id="yau-z9-3jC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gqV-SS-DeB" secondAttribute="trailing" id="0zP-Rn-GLR"/>
+                            <constraint firstItem="gqV-SS-DeB" firstAttribute="top" secondItem="VZl-YE-WDr" secondAttribute="bottom" constant="-53" id="HPX-Pa-bBS"/>
+                            <constraint firstAttribute="trailing" secondItem="gb2-PS-3ZS" secondAttribute="trailing" id="Qks-G8-wCo"/>
+                            <constraint firstItem="gqV-SS-DeB" firstAttribute="leading" secondItem="O5c-Bh-r62" secondAttribute="leading" id="ZiX-Wr-DyR"/>
+                            <constraint firstItem="gb2-PS-3ZS" firstAttribute="top" secondItem="O5c-Bh-r62" secondAttribute="top" id="aqo-sU-XKK"/>
+                            <constraint firstItem="gb2-PS-3ZS" firstAttribute="leading" secondItem="O5c-Bh-r62" secondAttribute="leading" id="hiH-u1-gTI"/>
+                            <constraint firstItem="b43-Az-KmU" firstAttribute="top" secondItem="gb2-PS-3ZS" secondAttribute="bottom" id="j6f-Dc-kP4"/>
+                            <constraint firstItem="Ynh-xy-9vZ" firstAttribute="height" secondItem="O5c-Bh-r62" secondAttribute="height" priority="250" id="kco-Kl-c1Y"/>
+                            <constraint firstItem="b43-Az-KmU" firstAttribute="top" secondItem="gqV-SS-DeB" secondAttribute="bottom" constant="-47" id="xj2-au-OAM"/>
+                            <constraint firstItem="Ynh-xy-9vZ" firstAttribute="width" secondItem="O5c-Bh-r62" secondAttribute="width" id="y7X-z0-j0q"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Evento" id="AWd-mc-veF"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="gb2-PS-3ZS" id="ijk-oB-MWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lv-c3-X76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="-545"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Laz-h3-dC9">
+            <objects>
+                <tabBarController restorationIdentifier="mainTabsRest" storyboardIdentifier="MainTabBarController" title="Main" id="89r-f2-et9" customClass="MainTabBarController" customModule="TEDxST" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="0eg-ap-ozI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="tabs" destination="0eg-ap-ozI" id="iku-LV-DqO"/>
+                        <segue destination="N7X-B5-bx9" kind="relationship" relationship="viewControllers" id="sFr-8I-G4n"/>
+                        <segue destination="SfK-tn-3og" kind="relationship" relationship="viewControllers" id="hZi-JK-r8c"/>
+                        <segue destination="BQC-Vs-hQj" kind="relationship" relationship="viewControllers" id="dh3-2Q-WCC"/>
+                        <segue destination="ls8-y4-qTP" kind="relationship" relationship="viewControllers" id="Dz1-Fr-D4y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5M-an-tIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1509" y="670"/>
+        </scene>
+        <!--Convidados-->
+        <scene sceneID="DZ7-st-nDN">
+            <objects>
+                <navigationController title="Convidados" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="BQC-Vs-hQj" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="fD0-lL-WGa"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="eFa-PC-eYA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eGk-qN-n1p">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="EeZ-Ce-OSu" kind="relationship" relationship="rootViewController" id="8sy-pS-C6k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKc-de-lyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1509" y="1695"/>
+        </scene>
+        <!--Convidados-->
+        <scene sceneID="EY1-qn-V5L">
+            <objects>
+                <tableViewController title="Convidados" id="EeZ-Ce-OSu" customClass="GuestListController" customModule="TEDxST" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" id="8EF-SM-ziI">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="2Oi-az-0Oh">
+                            <rect key="frame" x="0.0" y="305" width="600" height="202"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="250" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="GuestCell" rowHeight="200" id="JEj-tD-aOK" customClass="GuestCell" customModule="TEDxST">
+                                <rect key="frame" x="0.0" y="105" width="600" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" tableViewCell="JEj-tD-aOK" id="ckZ-Ds-Ftn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EeZ-Ce-OSu" id="OVs-yD-cvb"/>
+                            <outlet property="delegate" destination="EeZ-Ce-OSu" id="QKo-AX-SmL"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" id="glX-Vf-Wa8"/>
+                    <navigationItem key="navigationItem" title="Convidados" id="oEb-VY-34S"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="seJ-uF-SAM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </refreshControl>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="pullToRefreshEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="loadingViewEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BI9-Vg-RU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="1695"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="1224" height="792"/>
+        <image name="navegadores" width="1024" height="724"/>
+    </resources>
+</document>

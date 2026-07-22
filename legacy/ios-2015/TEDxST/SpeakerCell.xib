@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+        <mutableArray key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SpeakerCell" rowHeight="140" id="fgx-2D-HIo" customClass="SpeakerCell" customModule="TEDxST">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fgx-2D-HIo" id="oAI-5C-sUq">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="T80-CS-s2f" customClass="PFImageView">
+                        <rect key="frame" x="16" y="20" width="90" height="90"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="T80-CS-s2f" secondAttribute="height" multiplier="1:1" id="nfa-DA-R3b"/>
+                            <constraint firstAttribute="width" constant="90" id="p9M-87-OaK"/>
+                            <constraint firstAttribute="height" constant="90" id="xnM-Ag-AmX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nfa-DA-R3b"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How my dream became possible" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z0s-9C-Ron">
+                        <rect key="frame" x="121" y="49" width="471" height="22"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jWq-6k-8WG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" red="0.99682752070000002" green="0.99682752070000002" blue="0.99682752070000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jWq-6k-8WG"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:00" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-W3-WCN">
+                        <rect key="frame" x="121" y="8" width="471" height="17"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="5RQ-FA-ZM2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.90196078430000004" green="0.16862745100000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5RQ-FA-ZM2"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" text="Roselyn Silva" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0F-o7-MlO">
+                        <rect key="frame" x="121" y="25" width="471" height="24"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZSv-fc-XN3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" red="0.99682752070000002" green="0.99682752070000002" blue="0.99682752070000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZSv-fc-XN3"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="z0s-9C-Ron" firstAttribute="leading" secondItem="hTl-W3-WCN" secondAttribute="leading" id="01m-xk-sSZ"/>
+                    <constraint firstAttribute="trailing" secondItem="L0F-o7-MlO" secondAttribute="trailing" constant="8" id="1Tr-MQ-FKL"/>
+                    <constraint firstItem="hTl-W3-WCN" firstAttribute="leading" secondItem="T80-CS-s2f" secondAttribute="trailing" constant="15" id="3Mu-yf-Bqr"/>
+                    <constraint firstItem="L0F-o7-MlO" firstAttribute="leading" secondItem="hTl-W3-WCN" secondAttribute="leading" id="7QR-5u-IZ4"/>
+                    <constraint firstItem="hTl-W3-WCN" firstAttribute="trailing" secondItem="oAI-5C-sUq" secondAttribute="trailingMargin" id="8XP-Me-ksC"/>
+                    <constraint firstItem="z0s-9C-Ron" firstAttribute="top" secondItem="L0F-o7-MlO" secondAttribute="bottom" id="Eoy-xl-iaC"/>
+                    <constraint firstItem="T80-CS-s2f" firstAttribute="centerY" secondItem="oAI-5C-sUq" secondAttribute="centerY" id="Gx9-6i-muH"/>
+                    <constraint firstItem="T80-CS-s2f" firstAttribute="leading" secondItem="oAI-5C-sUq" secondAttribute="leadingMargin" constant="8" id="HJ5-Kl-WdW"/>
+                    <constraint firstItem="L0F-o7-MlO" firstAttribute="leading" secondItem="T80-CS-s2f" secondAttribute="trailing" constant="15" id="M1C-h7-Nhw"/>
+                    <constraint firstItem="z0s-9C-Ron" firstAttribute="leading" secondItem="T80-CS-s2f" secondAttribute="trailing" constant="15" id="Z1k-MQ-mXi"/>
+                    <constraint firstItem="hTl-W3-WCN" firstAttribute="top" secondItem="oAI-5C-sUq" secondAttribute="top" constant="8" id="dTT-yi-qN2"/>
+                    <constraint firstAttribute="trailing" secondItem="z0s-9C-Ron" secondAttribute="trailing" constant="8" id="rtO-XL-tvF"/>
+                    <constraint firstItem="L0F-o7-MlO" firstAttribute="top" secondItem="oAI-5C-sUq" secondAttribute="topMargin" id="t5I-uP-gyT"/>
+                    <constraint firstItem="L0F-o7-MlO" firstAttribute="top" secondItem="hTl-W3-WCN" secondAttribute="bottom" id="yyQ-54-YSb"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="t5I-uP-gyT"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="speakerImageSmall" destination="T80-CS-s2f" id="Zfj-rM-gu7"/>
+                <outlet property="speakerName" destination="L0F-o7-MlO" id="YTq-vg-FvV"/>
+                <outlet property="talkStartTime" destination="hTl-W3-WCN" id="fjg-7k-OMD"/>
+                <outlet property="talkTitle" destination="z0s-9C-Ron" id="FMT-Po-Cjk"/>
+            </connections>
+            <point key="canvasLocation" x="478" y="-249"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="x" width="2048" height="1340"/>
+    </resources>
+</document>

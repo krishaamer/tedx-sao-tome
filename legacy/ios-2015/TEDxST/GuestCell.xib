@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+        <mutableArray key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="GuestCell" id="sFL-ao-BIB" customClass="GuestCell" customModule="TEDxST">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" tableViewCell="sFL-ao-BIB" id="sYm-V2-I9R">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="249"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ih8-et-oxT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="249"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BJa-Nz-fKs">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="249"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest Name" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-Lx-Lvr">
+                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="FLL-IB-WJK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="Company name" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSh-xQ-fHC">
+                                    <rect key="frame" x="8" y="46" width="584" height="30"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="kFS-F3-v0H"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="301" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFV-C4-gYx">
+                                    <rect key="frame" x="8" y="84" width="584" height="157"/>
+                                    <animations/>
+                                    <mutableString key="text">Reason attending Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius mauris quis mauris egestas aliquam. Suspendisse non aliquam neque, eget ullamcorper dui. Cras tincidunt, felis id sodales lacinia, nulla nunc venenatis urna, ut tristique urna nibh vitae nulla. Nam ut nisi eget turpis facilisis mollis eget a lorem. Suspendisse eget lectus ut elit auctor eleifend congue in turpis. Nullam a tristique tellus. Integer at massa id mauris volutpat vestibulum. Cras tortor quam, aliquet eget sagittis a, sagittis porttitor odio.</mutableString>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="CFV-C4-gYx" secondAttribute="trailing" constant="8" id="3Rd-xt-JhJ"/>
+                                <constraint firstAttribute="trailing" secondItem="cpp-Lx-Lvr" secondAttribute="trailing" constant="8" id="4os-yF-LbS"/>
+                                <constraint firstItem="CFV-C4-gYx" firstAttribute="leading" secondItem="BJa-Nz-fKs" secondAttribute="leading" constant="8" id="5dS-F6-QnI"/>
+                                <constraint firstAttribute="trailing" secondItem="ZSh-xQ-fHC" secondAttribute="trailing" constant="8" id="Cdv-93-pvd"/>
+                                <constraint firstItem="CFV-C4-gYx" firstAttribute="top" secondItem="ZSh-xQ-fHC" secondAttribute="bottom" constant="8" id="GKE-0E-45j"/>
+                                <constraint firstItem="cpp-Lx-Lvr" firstAttribute="top" secondItem="BJa-Nz-fKs" secondAttribute="top" constant="8" id="JMY-TX-hgr"/>
+                                <constraint firstItem="ZSh-xQ-fHC" firstAttribute="top" secondItem="cpp-Lx-Lvr" secondAttribute="bottom" constant="8" id="Q6k-Sc-Mfe"/>
+                                <constraint firstItem="cpp-Lx-Lvr" firstAttribute="leading" secondItem="BJa-Nz-fKs" secondAttribute="leading" constant="8" id="YQe-vn-mEL"/>
+                                <constraint firstAttribute="bottom" secondItem="CFV-C4-gYx" secondAttribute="bottom" constant="8" id="ZSg-pd-Lx6"/>
+                                <constraint firstItem="ZSh-xQ-fHC" firstAttribute="leading" secondItem="BJa-Nz-fKs" secondAttribute="leading" constant="8" id="lIb-tV-6AX"/>
+                            </constraints>
+                        </view>
+                        <animations/>
+                        <blurEffect style="dark"/>
+                    </visualEffectView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="ih8-et-oxT" firstAttribute="leading" secondItem="sYm-V2-I9R" secondAttribute="leading" id="6u1-0i-ylz"/>
+                    <constraint firstItem="ih8-et-oxT" firstAttribute="top" secondItem="sYm-V2-I9R" secondAttribute="top" id="aiL-jt-1lZ"/>
+                    <constraint firstAttribute="bottom" secondItem="ih8-et-oxT" secondAttribute="bottom" id="nEc-Nc-B9a"/>
+                    <constraint firstAttribute="trailing" secondItem="ih8-et-oxT" secondAttribute="trailing" id="s1E-Dp-8RE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="company" destination="ZSh-xQ-fHC" id="hdB-fd-fDp"/>
+                <outlet property="message" destination="CFV-C4-gYx" id="hWm-hS-1KG"/>
+                <outlet property="name" destination="cpp-Lx-Lvr" id="0Gt-AX-grW"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="-75"/>
+        </tableViewCell>
+    </objects>
+</document>

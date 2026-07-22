@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20661C731B4F075E001BEF6A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */; };
+		20661C751B4F076C001BEF6A /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */; };
+		20661C7B1B4F2915001BEF6A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20661C7A1B4F2915001BEF6A /* UIViewExtension.swift */; };
+		20661C7D1B4F2921001BEF6A /* BigLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20661C7C1B4F2921001BEF6A /* BigLabel.swift */; };
+		3722C73B1B4D97C800488FF4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73A1B4D97C800488FF4 /* EventViewController.swift */; };
+		3722C73E1B4D97D300488FF4 /* LicenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73C1B4D97D300488FF4 /* LicenseCell.swift */; };
+		3722C73F1B4D97D300488FF4 /* LicenseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3722C73D1B4D97D300488FF4 /* LicenseListController.swift */; };
+		372CC2761B4B331700FAC40C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2751B4B331700FAC40C /* AudioToolbox.framework */; };
+		372CC2781B4B332500FAC40C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2771B4B332500FAC40C /* CFNetwork.framework */; };
+		372CC27A1B4B333000FAC40C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2791B4B333000FAC40C /* CoreGraphics.framework */; };
+		372CC27C1B4B333800FAC40C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC27B1B4B333800FAC40C /* CoreLocation.framework */; };
+		372CC2801B4B336600FAC40C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC27F1B4B336600FAC40C /* MobileCoreServices.framework */; };
+		372CC2821B4B336F00FAC40C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2811B4B336F00FAC40C /* QuartzCore.framework */; };
+		372CC2841B4B337A00FAC40C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2831B4B337A00FAC40C /* Security.framework */; };
+		372CC2881B4B339000FAC40C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CC2871B4B339000FAC40C /* SystemConfiguration.framework */; };
+		3766CCFD1B4C4B5900C11531 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3766CCFB1B4C4B5900C11531 /* Images.xcassets */; };
+		3766CCFE1B4C4B5900C11531 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3766CCFC1B4C4B5900C11531 /* LaunchScreen.xib */; };
+		3766CD051B4C4B8400C11531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD021B4C4B8400C11531 /* AppDelegate.swift */; };
+		3766CD061B4C4B8400C11531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3766CD031B4C4B8400C11531 /* Main.storyboard */; };
+		3766CD071B4C4B8400C11531 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD041B4C4B8400C11531 /* MainTabBarController.swift */; };
+		3766CD0D1B4C4B9100C11531 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD091B4C4B9100C11531 /* TeamCell.swift */; };
+		3766CD0E1B4C4B9100C11531 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3766CD0A1B4C4B9100C11531 /* TeamCell.xib */; };
+		3766CD0F1B4C4B9100C11531 /* TeamListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD0B1B4C4B9100C11531 /* TeamListController.swift */; };
+		3766CD131B4C4B9D00C11531 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD101B4C4B9D00C11531 /* GuestCell.swift */; };
+		3766CD141B4C4B9D00C11531 /* GuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3766CD111B4C4B9D00C11531 /* GuestCell.xib */; };
+		3766CD151B4C4B9D00C11531 /* GuestListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD121B4C4B9D00C11531 /* GuestListController.swift */; };
+		3766CD1A1B4C4BA900C11531 /* SpeakerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD161B4C4BA900C11531 /* SpeakerCell.swift */; };
+		3766CD1B1B4C4BA900C11531 /* SpeakerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3766CD171B4C4BA900C11531 /* SpeakerCell.xib */; };
+		3766CD1C1B4C4BA900C11531 /* SpeakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD181B4C4BA900C11531 /* SpeakerDetailViewController.swift */; };
+		3766CD1D1B4C4BA900C11531 /* SpeakerListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD191B4C4BA900C11531 /* SpeakerListController.swift */; };
+		3766CD221B4C4BC300C11531 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD1E1B4C4BC300C11531 /* Enum.swift */; };
+		3766CD231B4C4BC300C11531 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3766CD201B4C4BC300C11531 /* FontAwesome.otf */; };
+		3766CD241B4C4BC300C11531 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD211B4C4BC300C11531 /* FontAwesome.swift */; };
+		3766CD271B4C4BCF00C11531 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD251B4C4BCF00C11531 /* HSL.swift */; };
+		3766CD281B4C4BCF00C11531 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD261B4C4BCF00C11531 /* UIColor.swift */; };
+		3766CD2D1B4C4BDB00C11531 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD2A1B4C4BDB00C11531 /* OnboardingContentViewController.m */; };
+		3766CD2E1B4C4BDB00C11531 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD2C1B4C4BDB00C11531 /* OnboardingViewController.m */; };
+		3766CD301B4C521800C11531 /* RDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766CD2F1B4C521800C11531 /* RDLabel.swift */; };
+		377D9C551B4D66F5007D5119 /* LicenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377D9C541B4D66F5007D5119 /* LicenseCell.xib */; };
+		81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816B1A49DB6800E65899 /* Bolts.framework */; };
+		81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA816C1A49DB6800E65899 /* Parse.framework */; };
+		81BA81811A49E10C00E65899 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81801A49E10C00E65899 /* ParseUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		20661C7A1B4F2915001BEF6A /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = TEDxST/UIViewExtension.swift; sourceTree = SOURCE_ROOT; };
+		20661C7C1B4F2921001BEF6A /* BigLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigLabel.swift; path = TEDxST/BigLabel.swift; sourceTree = SOURCE_ROOT; };
+		3722C73A1B4D97C800488FF4 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = TEDxST/EventViewController.swift; sourceTree = SOURCE_ROOT; };
+		3722C73C1B4D97D300488FF4 /* LicenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseCell.swift; path = TEDxST/LicenseCell.swift; sourceTree = SOURCE_ROOT; };
+		3722C73D1B4D97D300488FF4 /* LicenseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseListController.swift; path = TEDxST/LicenseListController.swift; sourceTree = SOURCE_ROOT; };
+		372CC2751B4B331700FAC40C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		372CC2771B4B332500FAC40C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		372CC2791B4B333000FAC40C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		372CC27B1B4B333800FAC40C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		372CC27D1B4B335800FAC40C /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		372CC27F1B4B336600FAC40C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		372CC2811B4B336F00FAC40C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		372CC2831B4B337A00FAC40C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		372CC2871B4B339000FAC40C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		372CC2891B4B339E00FAC40C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		3766CCFB1B4C4B5900C11531 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TEDxST/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		3766CCFC1B4C4B5900C11531 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = TEDxST/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		3766CCFF1B4C4B6900C11531 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TEDxST/Info.plist; sourceTree = SOURCE_ROOT; };
+		3766CD001B4C4B6900C11531 /* TEDxST-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TEDxST-Bridging-Header.h"; path = "TEDxST/TEDxST-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		3766CD021B4C4B8400C11531 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TEDxST/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		3766CD031B4C4B8400C11531 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = TEDxST/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		3766CD041B4C4B8400C11531 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = TEDxST/MainTabBarController.swift; sourceTree = SOURCE_ROOT; };
+		3766CD091B4C4B9100C11531 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamCell.swift; path = TEDxST/TeamCell.swift; sourceTree = SOURCE_ROOT; };
+		3766CD0A1B4C4B9100C11531 /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TeamCell.xib; path = TEDxST/TeamCell.xib; sourceTree = SOURCE_ROOT; };
+		3766CD0B1B4C4B9100C11531 /* TeamListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamListController.swift; path = TEDxST/TeamListController.swift; sourceTree = SOURCE_ROOT; };
+		3766CD101B4C4B9D00C11531 /* GuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestCell.swift; path = TEDxST/GuestCell.swift; sourceTree = SOURCE_ROOT; };
+		3766CD111B4C4B9D00C11531 /* GuestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GuestCell.xib; path = TEDxST/GuestCell.xib; sourceTree = SOURCE_ROOT; };
+		3766CD121B4C4B9D00C11531 /* GuestListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestListController.swift; path = TEDxST/GuestListController.swift; sourceTree = SOURCE_ROOT; };
+		3766CD161B4C4BA900C11531 /* SpeakerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeakerCell.swift; path = TEDxST/SpeakerCell.swift; sourceTree = SOURCE_ROOT; };
+		3766CD171B4C4BA900C11531 /* SpeakerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpeakerCell.xib; path = TEDxST/SpeakerCell.xib; sourceTree = SOURCE_ROOT; };
+		3766CD181B4C4BA900C11531 /* SpeakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeakerDetailViewController.swift; path = TEDxST/SpeakerDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		3766CD191B4C4BA900C11531 /* SpeakerListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeakerListController.swift; path = TEDxST/SpeakerListController.swift; sourceTree = SOURCE_ROOT; };
+		3766CD1E1B4C4BC300C11531 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = TEDxST/Enum.swift; sourceTree = SOURCE_ROOT; };
+		3766CD1F1B4C4BC300C11531 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontAwesome.h; path = TEDxST/FontAwesome.h; sourceTree = SOURCE_ROOT; };
+		3766CD201B4C4BC300C11531 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = TEDxST/FontAwesome.otf; sourceTree = SOURCE_ROOT; };
+		3766CD211B4C4BC300C11531 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = TEDxST/FontAwesome.swift; sourceTree = SOURCE_ROOT; };
+		3766CD251B4C4BCF00C11531 /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = TEDxST/HSL.swift; sourceTree = SOURCE_ROOT; };
+		3766CD261B4C4BCF00C11531 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = TEDxST/UIColor.swift; sourceTree = SOURCE_ROOT; };
+		3766CD291B4C4BDB00C11531 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnboardingContentViewController.h; path = TEDxST/OnboardingContentViewController.h; sourceTree = SOURCE_ROOT; };
+		3766CD2A1B4C4BDB00C11531 /* OnboardingContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnboardingContentViewController.m; path = TEDxST/OnboardingContentViewController.m; sourceTree = SOURCE_ROOT; };
+		3766CD2B1B4C4BDB00C11531 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnboardingViewController.h; path = TEDxST/OnboardingViewController.h; sourceTree = SOURCE_ROOT; };
+		3766CD2C1B4C4BDB00C11531 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnboardingViewController.m; path = TEDxST/OnboardingViewController.m; sourceTree = SOURCE_ROOT; };
+		3766CD2F1B4C521800C11531 /* RDLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RDLabel.swift; path = TEDxST/RDLabel.swift; sourceTree = SOURCE_ROOT; };
+		377D9C541B4D66F5007D5119 /* LicenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LicenseCell.xib; path = TEDxST/LicenseCell.xib; sourceTree = SOURCE_ROOT; };
+		81BA81451A49DA1800E65899 /* TEDxST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEDxST.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA816B1A49DB6800E65899 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		81BA816C1A49DB6800E65899 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81BA81421A49DA1800E65899 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20661C751B4F076C001BEF6A /* libz.1.2.5.dylib in Frameworks */,
+				20661C731B4F075E001BEF6A /* libsqlite3.0.dylib in Frameworks */,
+				372CC2881B4B339000FAC40C /* SystemConfiguration.framework in Frameworks */,
+				372CC2841B4B337A00FAC40C /* Security.framework in Frameworks */,
+				372CC2821B4B336F00FAC40C /* QuartzCore.framework in Frameworks */,
+				372CC2801B4B336600FAC40C /* MobileCoreServices.framework in Frameworks */,
+				372CC27C1B4B333800FAC40C /* CoreLocation.framework in Frameworks */,
+				372CC27A1B4B333000FAC40C /* CoreGraphics.framework in Frameworks */,
+				372CC2781B4B332500FAC40C /* CFNetwork.framework in Frameworks */,
+				372CC2761B4B331700FAC40C /* AudioToolbox.framework in Frameworks */,
+				81BA81711A49DB6800E65899 /* Parse.framework in Frameworks */,
+				81BA81811A49E10C00E65899 /* ParseUI.framework in Frameworks */,
+				81BA81701A49DB6800E65899 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372CC2361B4B2C5C00FAC40C /* FontAwesome.swift */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD1E1B4C4BC300C11531 /* Enum.swift */,
+				3766CD1F1B4C4BC300C11531 /* FontAwesome.h */,
+				3766CD201B4C4BC300C11531 /* FontAwesome.otf */,
+				3766CD211B4C4BC300C11531 /* FontAwesome.swift */,
+			);
+			name = FontAwesome.swift;
+			sourceTree = "<group>";
+		};
+		372CC2391B4B2C5C00FAC40C /* DynamicColor */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD251B4C4BCF00C11531 /* HSL.swift */,
+				3766CD261B4C4BCF00C11531 /* UIColor.swift */,
+			);
+			name = DynamicColor;
+			sourceTree = "<group>";
+		};
+		372CC23C1B4B2C5C00FAC40C /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD291B4C4BDB00C11531 /* OnboardingContentViewController.h */,
+				3766CD2A1B4C4BDB00C11531 /* OnboardingContentViewController.m */,
+				3766CD2B1B4C4BDB00C11531 /* OnboardingViewController.h */,
+				3766CD2C1B4C4BDB00C11531 /* OnboardingViewController.m */,
+			);
+			name = Onboard;
+			sourceTree = "<group>";
+		};
+		372CC23D1B4B2C5C00FAC40C /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				372CC2361B4B2C5C00FAC40C /* FontAwesome.swift */,
+				372CC2391B4B2C5C00FAC40C /* DynamicColor */,
+				372CC23C1B4B2C5C00FAC40C /* Onboard */,
+			);
+			name = Vendor;
+			path = /Users/krishaamer/Desktop/TEDxST/TEDxST/..;
+			sourceTree = "<absolute>";
+		};
+		372CC2411B4B2C5C00FAC40C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD021B4C4B8400C11531 /* AppDelegate.swift */,
+				3766CD031B4C4B8400C11531 /* Main.storyboard */,
+				3766CD041B4C4B8400C11531 /* MainTabBarController.swift */,
+				3766CCFB1B4C4B5900C11531 /* Images.xcassets */,
+				3766CCFC1B4C4B5900C11531 /* LaunchScreen.xib */,
+			);
+			name = Main;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		372CC2461B4B2C5C00FAC40C /* Speakers */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD191B4C4BA900C11531 /* SpeakerListController.swift */,
+				3766CD161B4C4BA900C11531 /* SpeakerCell.swift */,
+				3766CD171B4C4BA900C11531 /* SpeakerCell.xib */,
+				3766CD181B4C4BA900C11531 /* SpeakerDetailViewController.swift */,
+			);
+			name = Speakers;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		372CC24A1B4B2C5C00FAC40C /* Guests */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD101B4C4B9D00C11531 /* GuestCell.swift */,
+				3766CD111B4C4B9D00C11531 /* GuestCell.xib */,
+				3766CD121B4C4B9D00C11531 /* GuestListController.swift */,
+			);
+			name = Guests;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		372CC24F1B4B2C5C00FAC40C /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD091B4C4B9100C11531 /* TeamCell.swift */,
+				3766CD0A1B4C4B9100C11531 /* TeamCell.xib */,
+				3766CD0B1B4C4B9100C11531 /* TeamListController.swift */,
+			);
+			name = Team;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		377D9C5A1B4D67B9007D5119 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				377D9C541B4D66F5007D5119 /* LicenseCell.xib */,
+				3722C73C1B4D97D300488FF4 /* LicenseCell.swift */,
+				3722C73D1B4D97D300488FF4 /* LicenseListController.swift */,
+			);
+			name = License;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		377D9C5D1B4D7DF8007D5119 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				3722C73A1B4D97C800488FF4 /* EventViewController.swift */,
+			);
+			name = Event;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		377D9C5E1B4D7E0C007D5119 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3766CD2F1B4C521800C11531 /* RDLabel.swift */,
+				20661C7C1B4F2921001BEF6A /* BigLabel.swift */,
+				20661C7A1B4F2915001BEF6A /* UIViewExtension.swift */,
+			);
+			name = Util;
+			path = ../../TEDxST/TEDxST;
+			sourceTree = "<group>";
+		};
+		81BA813C1A49DA1800E65899 = {
+			isa = PBXGroup;
+			children = (
+				372CC23D1B4B2C5C00FAC40C /* Vendor */,
+				377D9C5E1B4D7E0C007D5119 /* Util */,
+				372CC2411B4B2C5C00FAC40C /* Main */,
+				377D9C5D1B4D7DF8007D5119 /* Event */,
+				372CC2461B4B2C5C00FAC40C /* Speakers */,
+				372CC24A1B4B2C5C00FAC40C /* Guests */,
+				372CC24F1B4B2C5C00FAC40C /* Team */,
+				377D9C5A1B4D67B9007D5119 /* License */,
+				81BA81481A49DA1800E65899 /* Supporting Files */,
+				81BA816A1A49DB5600E65899 /* Frameworks */,
+				81BA81461A49DA1800E65899 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81BA81461A49DA1800E65899 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81BA81451A49DA1800E65899 /* TEDxST.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81BA81481A49DA1800E65899 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3766CCFF1B4C4B6900C11531 /* Info.plist */,
+				3766CD001B4C4B6900C11531 /* TEDxST-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			path = ParseStarterProject;
+			sourceTree = "<group>";
+		};
+		81BA816A1A49DB5600E65899 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20661C741B4F076C001BEF6A /* libz.1.2.5.dylib */,
+				20661C721B4F075E001BEF6A /* libsqlite3.0.dylib */,
+				372CC2891B4B339E00FAC40C /* libsqlite3.0.tbd */,
+				372CC2871B4B339000FAC40C /* SystemConfiguration.framework */,
+				372CC2831B4B337A00FAC40C /* Security.framework */,
+				372CC2811B4B336F00FAC40C /* QuartzCore.framework */,
+				372CC27F1B4B336600FAC40C /* MobileCoreServices.framework */,
+				372CC27D1B4B335800FAC40C /* libz.1.2.5.tbd */,
+				372CC27B1B4B333800FAC40C /* CoreLocation.framework */,
+				372CC2791B4B333000FAC40C /* CoreGraphics.framework */,
+				372CC2771B4B332500FAC40C /* CFNetwork.framework */,
+				372CC2751B4B331700FAC40C /* AudioToolbox.framework */,
+				81BA816B1A49DB6800E65899 /* Bolts.framework */,
+				81BA816C1A49DB6800E65899 /* Parse.framework */,
+				81BA81801A49E10C00E65899 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81BA81441A49DA1800E65899 /* TEDxST */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "TEDxST" */;
+			buildPhases = (
+				81BA81411A49DA1800E65899 /* Sources */,
+				81BA81421A49DA1800E65899 /* Frameworks */,
+				81BA81431A49DA1800E65899 /* Resources */,
+				81CC85E11A49F6D40076DE19 /* Upload Symbol Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TEDxST;
+			productName = ParseStarterProject;
+			productReference = 81BA81451A49DA1800E65899 /* TEDxST.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81BA813D1A49DA1800E65899 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Kris Haamer";
+				TargetAttributes = {
+					81BA81441A49DA1800E65899 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QDKYG4BFAD;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "TEDxST" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81BA813C1A49DA1800E65899;
+			productRefGroup = 81BA81461A49DA1800E65899 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81BA81441A49DA1800E65899 /* TEDxST */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81BA81431A49DA1800E65899 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3766CD061B4C4B8400C11531 /* Main.storyboard in Resources */,
+				377D9C551B4D66F5007D5119 /* LicenseCell.xib in Resources */,
+				3766CD1B1B4C4BA900C11531 /* SpeakerCell.xib in Resources */,
+				3766CCFE1B4C4B5900C11531 /* LaunchScreen.xib in Resources */,
+				3766CD0E1B4C4B9100C11531 /* TeamCell.xib in Resources */,
+				3766CCFD1B4C4B5900C11531 /* Images.xcassets in Resources */,
+				3766CD231B4C4BC300C11531 /* FontAwesome.otf in Resources */,
+				3766CD141B4C4B9D00C11531 /* GuestCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81CC85E11A49F6D40076DE19 /* Upload Symbol Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Symbol Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will upload symbol files for your application,\n# so all your crash reports are going to be symbolicated\n\n# Important!\n# Before using the script, please initialize CloudCode folder and replace <path_to_cloudcode_folder> with the path to it\n#\n# Read more on Parse.com - https://parse.com/apps/quickstart#analytics/crashreporting/ios/\n############################################################\n\n\n# export PATH=/usr/local/bin:$PATH\n# cd <path_to_cloudcode_folder>\n\n# parse symbols -p \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81BA81411A49DA1800E65899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3766CD1D1B4C4BA900C11531 /* SpeakerListController.swift in Sources */,
+				3766CD0D1B4C4B9100C11531 /* TeamCell.swift in Sources */,
+				20661C7B1B4F2915001BEF6A /* UIViewExtension.swift in Sources */,
+				20661C7D1B4F2921001BEF6A /* BigLabel.swift in Sources */,
+				3722C73B1B4D97C800488FF4 /* EventViewController.swift in Sources */,
+				3766CD051B4C4B8400C11531 /* AppDelegate.swift in Sources */,
+				3766CD241B4C4BC300C11531 /* FontAwesome.swift in Sources */,
+				3766CD281B4C4BCF00C11531 /* UIColor.swift in Sources */,
+				3766CD131B4C4B9D00C11531 /* GuestCell.swift in Sources */,
+				3766CD2E1B4C4BDB00C11531 /* OnboardingViewController.m in Sources */,
+				3766CD271B4C4BCF00C11531 /* HSL.swift in Sources */,
+				3766CD221B4C4BC300C11531 /* Enum.swift in Sources */,
+				3766CD071B4C4B8400C11531 /* MainTabBarController.swift in Sources */,
+				3722C73F1B4D97D300488FF4 /* LicenseListController.swift in Sources */,
+				3766CD0F1B4C4B9100C11531 /* TeamListController.swift in Sources */,
+				3766CD151B4C4B9D00C11531 /* GuestListController.swift in Sources */,
+				3766CD2D1B4C4BDB00C11531 /* OnboardingContentViewController.m in Sources */,
+				3766CD1C1B4C4BA900C11531 /* SpeakerDetailViewController.swift in Sources */,
+				3722C73E1B4D97D300488FF4 /* LicenseCell.swift in Sources */,
+				3766CD1A1B4C4BA900C11531 /* SpeakerCell.swift in Sources */,
+				3766CD301B4C521800C11531 /* RDLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		81BA81621A49DA1800E65899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81BA81631A49DA1800E65899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81BA81651A49DA1800E65899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/TEDxST/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishaamer.TEDxST;
+				PRODUCT_NAME = TEDxST;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TEDxST/TEDxST-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		81BA81661A49DA1800E65899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/TEDxST/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishaamer.TEDxST;
+				PRODUCT_NAME = TEDxST;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TEDxST/TEDxST-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81BA81401A49DA1800E65899 /* Build configuration list for PBXProject "TEDxST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA81621A49DA1800E65899 /* Debug */,
+				81BA81631A49DA1800E65899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BA81641A49DA1800E65899 /* Build configuration list for PBXNativeTarget "TEDxST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA81651A49DA1800E65899 /* Debug */,
+				81BA81661A49DA1800E65899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81BA813D1A49DA1800E65899 /* Project object */;
+}

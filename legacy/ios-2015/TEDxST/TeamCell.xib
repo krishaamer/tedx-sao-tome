@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </mutableArray>
+        <mutableArray key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="TeamCell" id="gqJ-Lk-WOK" userLabel="TeamCell" customClass="TeamCell" customModule="TEDxST">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gqJ-Lk-WOK" id="aXz-mi-SIm">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFm-a1-FLU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YYU-LB-mzj">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9Y-jK-Pkf" userLabel="Role">
+                                    <rect key="frame" x="15" y="43" width="564" height="21"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="z4d-U5-eNf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-jM-F3B" userLabel="Name">
+                                    <rect key="frame" x="15" y="11" width="560" height="24"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="7yJ-oH-bAS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="wordWrap" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzV-sm-xxH" userLabel="Desc">
+                                    <rect key="frame" x="15" y="72" width="570" height="119"/>
+                                    <animations/>
+                                    <string key="text">Member description lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius mauris quis mauris egestas aliquam. Suspendisse non aliquam neque, eget ullamcorper dui. Cras tincidunt, felis id sodales lacinia, nulla nunc venenatis urna, ut tristique urna nibh vitae nulla. Nam ut nisi eget turpis facilisis mollis eget a lorem. Suspendisse eget lectus ut elit auctor eleifend congue in turpis. Nullam a tristique tellus. Integer at massa id mauris volutpat vestibulum. Cras tortor quam, aliquet eget sagittis a, sagittis porttitor odio.</string>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstItem="B9Y-jK-Pkf" firstAttribute="leading" secondItem="gVM-jM-F3B" secondAttribute="leading" id="6Jw-xc-kae"/>
+                                <constraint firstItem="mzV-sm-xxH" firstAttribute="top" secondItem="B9Y-jK-Pkf" secondAttribute="bottom" constant="8" symbolic="YES" id="BHp-w5-AcO"/>
+                                <constraint firstItem="B9Y-jK-Pkf" firstAttribute="top" secondItem="gVM-jM-F3B" secondAttribute="bottom" constant="8" symbolic="YES" id="BKv-nD-kHh"/>
+                                <constraint firstItem="mzV-sm-xxH" firstAttribute="bottom" secondItem="YYU-LB-mzj" secondAttribute="bottomMargin" id="HAF-pX-LhK"/>
+                                <constraint firstItem="gVM-jM-F3B" firstAttribute="top" secondItem="YYU-LB-mzj" secondAttribute="top" constant="11" id="KGk-lT-TKJ"/>
+                                <constraint firstAttribute="trailing" secondItem="gVM-jM-F3B" secondAttribute="trailing" constant="25" id="MmQ-Gk-8Nl"/>
+                                <constraint firstItem="mzV-sm-xxH" firstAttribute="leading" secondItem="B9Y-jK-Pkf" secondAttribute="leading" id="QhR-0J-ydI"/>
+                                <constraint firstItem="mzV-sm-xxH" firstAttribute="leading" secondItem="YYU-LB-mzj" secondAttribute="leading" constant="15" id="Te7-rN-TCG"/>
+                                <constraint firstAttribute="trailing" secondItem="mzV-sm-xxH" secondAttribute="trailing" constant="15" id="aQf-Zw-baT"/>
+                                <constraint firstItem="mzV-sm-xxH" firstAttribute="leading" secondItem="gVM-jM-F3B" secondAttribute="leading" id="cUE-oB-x1Q"/>
+                                <constraint firstAttribute="trailing" secondItem="B9Y-jK-Pkf" secondAttribute="trailing" constant="21" id="dBi-P9-Knz"/>
+                                <constraint firstItem="B9Y-jK-Pkf" firstAttribute="leading" secondItem="gVM-jM-F3B" secondAttribute="leading" id="l5O-E0-gDM"/>
+                                <constraint firstItem="gVM-jM-F3B" firstAttribute="leading" secondItem="YYU-LB-mzj" secondAttribute="leading" constant="15" id="txF-gg-k2B"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="QhR-0J-ydI"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <animations/>
+                        <blurEffect style="dark"/>
+                    </visualEffectView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JFm-a1-FLU" secondAttribute="trailing" id="D3z-Q8-xEv"/>
+                    <constraint firstAttribute="bottom" secondItem="JFm-a1-FLU" secondAttribute="bottom" id="UxN-UA-Puo"/>
+                    <constraint firstItem="JFm-a1-FLU" firstAttribute="top" secondItem="aXz-mi-SIm" secondAttribute="top" id="VZM-k7-s3O"/>
+                    <constraint firstItem="JFm-a1-FLU" firstAttribute="leading" secondItem="aXz-mi-SIm" secondAttribute="leading" id="d3F-EG-WBK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="desc" destination="mzV-sm-xxH" id="76U-hw-h69"/>
+                <outlet property="name" destination="gVM-jM-F3B" id="8Mt-f7-HFx"/>
+                <outlet property="role" destination="B9Y-jK-Pkf" id="St8-b1-0bP"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="-75"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../TEDxST/TEDxST/SpeakerListController.swift"
+            timestampString = "457913734.194541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../TEDxST/TEDxST/LicensesViewController.swift"
+            timestampString = "457916062.956636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "LicensesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TEDxST.LicensesViewController.dismissModalBtn.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIBarButtonItem&gt;"
+                  moduleName = "TEDxST"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krishaamer/Desktop/TEDxST/TEDxST/LicensesViewController.swift"
+                  timestampString = "457966044.897589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TEDxST.LicensesViewController.dismissModalBtn.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIBarButtonItem&gt;"
+                  moduleName = "TEDxST"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krishaamer/Desktop/TEDxST/TEDxST/LicensesViewController.swift"
+                  timestampString = "457966044.903313"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TEDxST.LicensesViewController.dismissModalBtn.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIBarButtonItem&gt;"
+                  moduleName = "TEDxST"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krishaamer/Desktop/TEDxST/TEDxST/LicensesViewController.swift"
+                  timestampString = "457966044.903528"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TEDxST.LicensesViewController.init (TEDxST.LicensesViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; TEDxST.LicensesViewController"
+                  moduleName = "TEDxST"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krishaamer/Desktop/TEDxST/TEDxST/LicensesViewController.swift"
+                  timestampString = "457966044.903724"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TEDxST.LicensesViewController.init (TEDxST.LicensesViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; TEDxST.LicensesViewController"
+                  moduleName = "TEDxST"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/krishaamer/Desktop/TEDxST/TEDxST/LicensesViewController.swift"
+                  timestampString = "457966044.903897"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
