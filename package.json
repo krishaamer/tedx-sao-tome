@@ -1,0 +1,12 @@
+{
+  "name": "tedx-sao-tome",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.14.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @tedxsaotome/web dev",
+    "lint": "pnpm --filter @tedxsaotome/web lint",
+    "build": "pnpm --filter @tedxsaotome/web build",
+    "check": "pnpm lint && pnpm build"
+  }
+}

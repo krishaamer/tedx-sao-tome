@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# JavaScript dependencies and generated output
+node_modules/
+.pnpm-store/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+.vercel/
+.playwright-mcp/
+
+# Xcode user and generated state
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
