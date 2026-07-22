@@ -1,9 +1,3 @@
-# TEDxSãoTomé production snapshot — 2026-06-12
-#
-# The files are stored outside Git in encrypted, access-restricted backup
-# storage. Values below were calculated before relocation and verified again
-# after relocation.
-
 25254516ed556f2fa7d16fdf9b638c6562c78f8338458db5c654954d1b984081  tedxsaotome-code-2026-06-12.tar.gz
 9c961b327f48192b95bed70837a96c0b32ec28f31c115ed93bc8c8a6ba5b3dde  tedxsaotome-db-2026-06-12.sql
 3ffe7e3c24ddf180c6d0d8dce96cbad4816d5191eaebf9da7b15535b6bab677b  tedxsaotome-uploads-2026-06-12.tar.gz

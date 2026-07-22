@@ -9,8 +9,9 @@ history of the original web and iOS projects.
 - `apps/mobile` — home for the future modern mobile application.
 - `legacy/wordpress-2018` — archived WordPress/Bedrock production site.
 - `legacy/ios-2015` — archived native iOS application.
+- `archive/backups/2026-06-12` — complete production code, database, and uploads snapshot.
 - `docs/reference-screenshots` — visual references used during modernization.
-- `docs/backups` — checksums and recovery notes; production data is never stored in Git.
+- `docs/backups` — checksums and recovery notes for archived snapshots.
 - `tools/migrations` — one-time, portable migration utilities.
 
 The legacy directories are retained for provenance and should not receive new
@@ -43,6 +44,6 @@ The original GitHub repositories remain available in archived, read-only form.
 
 ## Backups
 
-Database, uploads, and server snapshots contain private production data and are
-excluded from Git. See `docs/backups/2026-06-12.sha256` for the recovery
-manifest used to validate the external snapshot.
+The complete 2026-06-12 code, database, and uploads snapshot is stored at
+`archive/backups/2026-06-12`. See `docs/backups/2026-06-12.sha256` for the
+manifest used to verify each archived file.
