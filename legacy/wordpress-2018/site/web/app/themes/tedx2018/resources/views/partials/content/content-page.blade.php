@@ -1,0 +1,8 @@
+@include('partials.content.section.menu')
+@include('partials.content.section.hero')
+@include('partials.content.section.theme')
+@include('partials.content.section.about')
+@include('partials.content.section.speakers')
+@include('partials.content.section.programme')
+@include('partials.content.section.sponsors')
+@include('partials.content.section.footer')

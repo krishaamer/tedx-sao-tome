@@ -1,0 +1,6 @@
+# Documentation: https://roots.io/trellis/docs/mail/
+mail_smtp_server: email-smtp.eu-west-1.amazonaws.com:587
+mail_admin: info@tedxsaotome.com
+mail_hostname: tedxsaotome.com
+mail_user: AKIAJSK4NKARFT6MRDOA
+mail_password: "{{ vault_mail_password }}" # Define this variable in group_vars/all/vault.yml

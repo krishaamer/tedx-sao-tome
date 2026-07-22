@@ -1,0 +1,11 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+/* Inverted */
+.ui.inverted.black.buttons .button,
+.ui.inverted.black.button {
+  background-color: transparent;
+  box-shadow: none !important;
+  color: @invertedTextColor;
+}

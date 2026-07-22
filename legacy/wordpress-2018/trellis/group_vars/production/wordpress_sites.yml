@@ -1,0 +1,20 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  www.tedxsaotome.com:
+    site_hosts:
+      - canonical: www.tedxsaotome.com
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: kris@haam.co
+    repo: git@github.com:krishaamer/tedx2018.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true

@@ -1,0 +1,30 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@importGoogleFonts: false;
+@fontName: "Helvetica";
+@headerFont: "Helvetica";
+@pageFont: "Helvetica";
+@emSize: 16px;
+@fontSize: 16px;
+
+@defaultBorderRadius: 0;
+@absoluteBorderRadius: 0;
+
+@green: #00d2a0;
+@grey: #46464b;
+@black: #000000;
+
+@h1: 3rem;
+@h2: 2rem;
+@h3: 1.5rem;
+@h4: 1rem;
+@h5: 1rem;
+@h6: 1rem;
+
+@textColor: @black;
+@linkColor: @black;
+@linkUnderline: none;
+@linkHoverUnderline: underline;
+@linkHoverColor: @black;

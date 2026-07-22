@@ -1,0 +1,21 @@
+/*******************************
+        User Overrides
+*******************************/
+
+/* Displays like a select box */
+.ui.selection.dropdown {
+
+}
+.ui.selection.dropdown.visible,
+.ui.selection.dropdown.active {
+
+}
+
+select.ui.dropdown {
+
+}
+.ui.selection.dropdown > .search.icon,
+.ui.selection.dropdown > .delete.icon,
+.ui.selection.dropdown > .dropdown.icon {
+
+}

@@ -1,0 +1,8 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@borderColor: #000;
+@borderWidth: 0;
+@borderRadius: 0;
+@border: @borderWidth solid @borderColor;
