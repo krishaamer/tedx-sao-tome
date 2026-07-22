@@ -1,12 +1,27 @@
 import { execFileSync } from "node:child_process";
 import { copyFileSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const siteRoot = "/Users/krishaamer/Local Sites/tedxsaotome/app/public";
+function requiredEnvironment(name) {
+  const value = process.env[name];
+
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+
+  return value;
+}
+
+const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
+const repositoryRoot = path.resolve(scriptDirectory, "../..");
+const siteRoot = requiredEnvironment("WORDPRESS_SITE_ROOT");
 const uploadsRoot = path.join(siteRoot, "wp-content/uploads");
-const outputRoot = "/Users/krishaamer/Work/legacy-apps/tedxsaotome/tedx-web/tedx2018-next";
-const mysql = "/Users/krishaamer/Library/Application Support/Local/lightning-services/mysql-8.4.0/bin/darwin-arm64/bin/mysql";
-const mysqlDefaults = "/Users/krishaamer/Library/Application Support/Local/run/8Vkh_rT1R/conf/mysql/my.cnf";
+const outputRoot = process.env.WEB_APP_ROOT ?? path.join(repositoryRoot, "apps/web");
+const mysql = process.env.MYSQL_BIN ?? "mysql";
+const mysqlDefaults = process.env.MYSQL_DEFAULTS_FILE;
+const mysqlDatabase = process.env.MYSQL_DATABASE ?? "local";
+const mysqlUser = process.env.MYSQL_USER ?? "root";
 
 const programme = [
   ["14:30", "Check-in"],
@@ -71,14 +86,16 @@ const sponsors = [
 ];
 
 function queryJson(sql) {
+  const connectionArguments = [
+    ...(mysqlDefaults ? [`--defaults-file=${mysqlDefaults}`] : []),
+    `-u${mysqlUser}`,
+    "-D",
+    mysqlDatabase,
+  ];
   const output = execFileSync(
     mysql,
     [
-      `--defaults-file=${mysqlDefaults}`,
-      "-uroot",
-      "-proot",
-      "-D",
-      "local",
+      ...connectionArguments,
       "--batch",
       "--raw",
       "--skip-column-names",
@@ -218,5 +235,5 @@ export const socialLinks = [
 ];
 `;
 
-writeFileSync(path.join(outputRoot, "src/data/site.ts"), siteTs);
+writeFileSync(path.join(outputRoot, "src/content/2018.ts"), siteTs);
 console.log(`Imported ${speakers.length} speakers and ${sponsorData.length} sponsors.`);

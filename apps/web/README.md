@@ -7,7 +7,7 @@ exported as static files.
 
 ```bash
 pnpm install
-pnpm dev
+pnpm dev:web
 ```
 
 Open <http://localhost:3000>.
@@ -25,5 +25,5 @@ generated and excluded from Git.
 ## Content provenance
 
 The event content and media were imported from the legacy WordPress site. The
-one-time importer is kept for provenance and will live at the monorepo level
-under `tools/migrations/`.
+portable one-time importer is kept for provenance at
+`tools/migrations/import-wordpress-2018.mjs`.
