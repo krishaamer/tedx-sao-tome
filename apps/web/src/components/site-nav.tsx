@@ -1,28 +1,65 @@
-import Link from "next/link";
-import { navItems } from "@/content/2018";
+"use client";
 
-type SiteNavProps = {
-  compact?: boolean;
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { navItems } from "@/content/site";
+
+type NavLinksProps = {
+  className: string;
+  id?: string;
+  onNavigate?: () => void;
 };
 
-export function SiteNav({ compact = false }: SiteNavProps) {
+function NavLinks({ className, id, onNavigate }: NavLinksProps) {
   return (
-    <header className={`site-nav${compact ? " site-nav--static" : ""}`} id={compact ? undefined : "menu"}>
-      <nav className="container site-nav__inner" aria-label="Navegação principal">
-        <Link className="site-nav__brand" href="/" aria-label="TEDxSãoTomé">
-          <span className="brand-logo" aria-hidden="true" />
+    <div className={className} id={id}>
+      {navItems.map((item) => (
+        <Link href={item.href} key={item.href} onClick={onNavigate}>
+          {item.label}
         </Link>
-        {compact ? (
-          <Link href="/#speakers">Oradores</Link>
-        ) : (
-          <div className="site-nav__links">
-            {navItems.map((item) => (
-              <Link href={item.href} key={item.href}>
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        )}
+      ))}
+    </div>
+  );
+}
+
+export function SiteNav() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <header className="site-nav" id="menu">
+      <nav className="container site-nav__inner" aria-label="Navegação principal">
+        <Link
+          className="site-nav__brand"
+          href="/"
+          aria-label="TEDxSãoTomé"
+          onClick={() => setMobileOpen(false)}
+        >
+          <Image
+            className="brand-logo"
+            src="/images/tedxsaotome-logo.svg"
+            alt="TEDxSãoTomé"
+            width={220}
+            height={55}
+            priority
+          />
+          <span className="site-nav__edition">Arquivo 2018</span>
+        </Link>
+        <NavLinks className="site-nav__links site-nav__links--desktop" />
+        <button
+          className="site-nav__toggle"
+          type="button"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setMobileOpen((open) => !open)}
+        >
+          {mobileOpen ? "Fechar" : "Menu"}
+        </button>
+        <NavLinks
+          className={`site-nav__links site-nav__links--mobile${mobileOpen ? " is-open" : ""}`}
+          id="mobile-navigation"
+          onNavigate={() => setMobileOpen(false)}
+        />
       </nav>
     </header>
   );

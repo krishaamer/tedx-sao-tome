@@ -1,13 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
-import { navItems, socialLinks } from "@/content/2018";
+import { navItems, socialLinks } from "@/content/site";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer" id="footer">
       <div className="container site-footer__grid">
-        <div>
-          <span className="brand-logo" aria-label="TEDxSãoTomé" role="img" />
-          <p>This independent TEDx event is operated under license from TED.</p>
+        <div className="site-footer__brand">
+          <Image
+            className="brand-logo"
+            src="/images/tedxsaotome-logo.svg"
+            alt="TEDxSãoTomé"
+            width={220}
+            height={55}
+          />
+          <p>Arquivo digital das ideias e das pessoas que fizeram o TEDxSãoTomé 2018.</p>
+          <small>Este evento TEDx independente foi realizado sob licença TED.</small>
         </div>
         <div>
           <h2>Navegação</h2>
@@ -21,15 +29,19 @@ export function SiteFooter() {
         </div>
         <div>
           <h2>Social</h2>
-          <p>Siga-nos nas mídias sociais para receber atualizações sobre o evento.</p>
+          <p>Reencontre a comunidade TEDxSãoTomé nas redes sociais.</p>
           <div className="social-links">
             {socialLinks.map((item) => (
               <a href={item.href} key={item.href} target="_blank" rel="noreferrer" aria-label={item.label}>
-                {item.short}
+                <span aria-hidden="true">{item.short}</span>
               </a>
             ))}
           </div>
         </div>
+      </div>
+      <div className="container site-footer__base">
+        <span>TEDxSãoTomé</span>
+        <Link href="#menu">Voltar ao topo ↑</Link>
       </div>
     </footer>
   );

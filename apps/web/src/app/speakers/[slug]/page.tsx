@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
 import { speakers } from "@/content/2018";
+import { siteConfig } from "@/content/site";
 
 type SpeakerPageProps = {
   params: Promise<{
@@ -18,17 +21,37 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: SpeakerPageProps) {
+export async function generateMetadata({ params }: SpeakerPageProps): Promise<Metadata> {
   const { slug } = await params;
   const speaker = speakers.find((item) => item.slug === slug);
 
   if (!speaker) {
-    return {};
+    return {
+      title: "Orador não encontrado",
+    };
   }
 
   return {
-    title: `${speaker.name} | TEDxSãoTomé 2018`,
+    title: speaker.name,
     description: `${speaker.talk} no TEDxSãoTomé 2018.`,
+    alternates: {
+      canonical: `/speakers/${speaker.slug}`,
+    },
+    openGraph: {
+      type: "profile",
+      title: `${speaker.name} | TEDxSãoTomé 2018`,
+      description: speaker.talk,
+      url: `/speakers/${speaker.slug}`,
+      siteName: siteConfig.name,
+      images: [
+        {
+          url: speaker.image,
+          width: 534,
+          height: 400,
+          alt: speaker.name,
+        },
+      ],
+    },
   };
 }
 
@@ -40,28 +63,55 @@ export default async function SpeakerPage({ params }: SpeakerPageProps) {
     notFound();
   }
 
+  const speakerIndex = speakers.findIndex((item) => item.slug === speaker.slug);
+  const previousSpeaker = speakers[(speakerIndex - 1 + speakers.length) % speakers.length];
+  const nextSpeaker = speakers[(speakerIndex + 1) % speakers.length];
+
   return (
     <>
-      <SiteNav compact />
-      <main className="speaker-page">
+      <SiteNav />
+      <main className="speaker-page" id="main-content">
         <section className="speaker-hero">
           <div className="container speaker-hero__grid">
-            <div>
+            <div className="speaker-hero__copy">
               <p className="section-kicker">Orador TEDxSãoTomé 2018</p>
               <h1>{speaker.name}</h1>
-              <p>{speaker.talk}</p>
+              <p className="speaker-hero__talk">{speaker.talk}</p>
               <Link className="back-link" href="/#speakers">
-                Voltar aos oradores
+                <span aria-hidden="true">←</span> Todos os oradores
               </Link>
             </div>
-            <Image src={speaker.image} alt={speaker.name} width={534} height={400} priority />
+            <figure className="speaker-hero__portrait">
+              <Image
+                src={speaker.image}
+                alt={speaker.name}
+                width={534}
+                height={400}
+                sizes="(max-width: 860px) 100vw, 45vw"
+                priority
+              />
+            </figure>
           </div>
         </section>
-        <section
-          className="container speaker-copy"
-          dangerouslySetInnerHTML={{ __html: speaker.bioHtml }}
-        />
+        <section className="container speaker-copy" aria-labelledby="biography-heading">
+          <p className="section-kicker">Perfil</p>
+          <h2 id="biography-heading">Biografia</h2>
+          <div dangerouslySetInnerHTML={{ __html: speaker.bioHtml }} />
+        </section>
+        <nav className="speaker-pagination" aria-label="Navegar entre oradores">
+          <div className="container speaker-pagination__grid">
+            <Link href={`/speakers/${previousSpeaker.slug}`}>
+              <span>← Anterior</span>
+              <strong>{previousSpeaker.name}</strong>
+            </Link>
+            <Link href={`/speakers/${nextSpeaker.slug}`}>
+              <span>Seguinte →</span>
+              <strong>{nextSpeaker.name}</strong>
+            </Link>
+          </div>
+        </nav>
       </main>
+      <SiteFooter />
     </>
   );
 }
