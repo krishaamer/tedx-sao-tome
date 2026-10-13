@@ -17,6 +17,8 @@ coverage/
 *.log
 .vercel/
 .playwright-mcp/
+.playwright-cli/
+output/playwright/
 
 # Xcode user and generated state
 DerivedData/

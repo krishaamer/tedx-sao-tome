@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
-import { pastEvents, programme, speakers, sponsors } from "@/content/2018";
+import { programme, speakers, sponsors } from "@/content/2018";
+import { editions, editionPath } from "@/content/archive";
 import { siteConfig } from "@/content/site";
 
 export const dynamic = "error";
@@ -13,8 +14,6 @@ const eventStructuredData = {
   name: siteConfig.event.name,
   description: siteConfig.description,
   startDate: siteConfig.event.startDate,
-  endDate: siteConfig.event.endDate,
-  eventStatus: "https://schema.org/EventCompleted",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   image: [`${siteConfig.url}/images/hero-revolution.jpg`],
   location: {
@@ -44,7 +43,7 @@ export default function Home() {
             src="/images/hero.jpg"
             alt=""
             fill
-            priority
+            preload
             sizes="100vw"
           />
           <div className="hero__veil" aria-hidden="true" />
@@ -193,7 +192,7 @@ export default function Home() {
             <ol className="programme__list">
               {programme.map(([time, item]) => (
                 <li key={`${time}-${item}`}>
-                  <time dateTime={`2018-09-29T${time}:00+00:00`}>{time}</time>
+                  <time dateTime={`2018-09-29T${time}:00+01:00`}>{time}</time>
                   <p>{item}</p>
                 </li>
               ))}
@@ -229,12 +228,13 @@ export default function Home() {
               <h2>Edições anteriores</h2>
             </header>
             <div className="past__grid">
-              {pastEvents.map((event) => (
+              {editions.filter((event) => event.year !== "2018").map((event) => (
                 <article className="past-card" key={event.year}>
+                  <Link href={editionPath(event.year)} prefetch={false}>
                   <div className="past-card__image">
                     <Image
                       src={event.image}
-                      alt={`TEDxSãoTomé ${event.year}`}
+                      alt="Fotografia do arquivo TEDxSãoTomé"
                       width={1050}
                       height={720}
                       sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 25vw"
@@ -242,9 +242,22 @@ export default function Home() {
                     <span>{event.year}</span>
                   </div>
                   <h3>{event.theme}</h3>
-                  <p>{event.date}</p>
+                  <p>{event.dateLabel} · {event.venue}</p>
+                  <span className="text-link">Explorar a edição →</span>
+                  </Link>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+        <section className="home-community">
+          <div className="container">
+            <p className="section-kicker">A conversa continua</p>
+            <h2>As ideias aproximam-nos.</h2>
+            <p>Descubra as palestras, conheça a história das equipas e acompanhe a comunidade TEDxSãoTomé.</p>
+            <div className="inline-actions">
+              <Link className="button button--primary" href="/videos/">Ver as palestras</Link>
+              <Link className="button button--ghost" href="/participar/">Participar na conversa</Link>
             </div>
           </div>
         </section>
