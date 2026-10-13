@@ -69,14 +69,19 @@ export const editions: Edition[] = [
 ];
 
 export function editionPath(year: string) {
-  return year === "2018" ? "/" : `/edicoes/${year}/`;
+  return `/edicoes/${year}/`;
 }
 
 export type Recording = {
   speaker: string;
   title: string;
   year: string;
-  youtubeId: string;
+  youtubeId?: string;
+  id?: string;
+  embedUrl?: string;
+  sourceUrl?: string;
+  thumbnail?: string;
+  label?: string;
 };
 
 // Linked from TED's official event page and verified as TEDx Talks uploads.
@@ -90,17 +95,34 @@ export const recordings: Recording[] = [
   { speaker: "Aoaní d’Alva", title: "Talking about Africa", year: "2013", youtubeId: "XPTOyAEmjjM" },
   { speaker: "Guilherme de Carvalho", title: "Performance", year: "2013", youtubeId: "iHgmfWEFmqk" },
   { speaker: "Sara Moreira", title: "How to listen the world?", year: "2013", youtubeId: "owWyAQDuhZw" },
+  { speaker: "Killa Z", title: "Turn bad intentions into good", year: "2015", youtubeId: "OQOuIn4ZTsc" },
+  { speaker: "Roselyn Silva", title: "How can an idea change the world", year: "2015", youtubeId: "xBWPs_LBdaw" },
+  { speaker: "Carla Vera Cruz", title: "A Woman’s place is everywhere", year: "2016", youtubeId: "u3NH6EdA5x0" },
+  { speaker: "Fernanda Pontífice", title: "We should all speak forro", year: "2016", youtubeId: "iMXl-GQhprc" },
 ];
 
-export const screenings = [
-  {
-    speaker: "Harvey Fineberg",
-    title: "Estamos prontos para a neoevolução?",
-    url: "https://www.ted.com/talks/harvey_fineberg_are_we_ready_for_neo_evolution",
-  },
-  {
-    speaker: "Camille A. Brown",
-    title: "Uma história visual da dança social em 25 movimentos",
-    url: "https://www.ted.com/talks/camille_a_brown_a_visual_history_of_social_dance_in_25_moves",
-  },
+// Screenings documented in the historical programmes, not local appearances.
+const screeningSources = [
+  ["2013", "Chimamanda Ngozi Adichie", "O perigo da história única", "chimamanda_ngozi_adichie_the_danger_of_a_single_story"],
+  ["2013", "Adora Svitak", "O que os adultos podem aprender com as crianças", "adora_svitak_what_adults_can_learn_from_kids"],
+  ["2014", "Mohamed Ali", "A ligação entre o desemprego e o terrorismo", "mohamed_ali_the_link_between_unemployment_and_terrorism"],
+  ["2014", "Joi Ito", "Quer inovar? Torne-se um now-ist", "joi_ito_want_to_innovate_become_a_now_ist"],
+  ["2015", "Bel Pesce", "Cinco maneiras de matar os seus sonhos", "bel_pesce_5_ways_to_kill_your_dreams"],
+  ["2015", "Alessandra Orofino", "A cidade é nossa. Vamos melhorá-la", "alessandra_orofino_it_s_our_city_let_s_fix_it"],
+  ["2016", "Ngozi Okonjo-Iweala", "Quer ajudar a África? Faça negócios aqui", "ngozi_okonjo_iweala_want_to_help_africa_do_business_here"],
+  ["2016", "Charles Robertson", "O próximo boom de África", "charles_robertson_africa_s_next_boom"],
+  ["2018", "Harvey Fineberg", "Estamos prontos para a neoevolução?", "harvey_fineberg_are_we_ready_for_neo_evolution"],
+  ["2018", "Camille A. Brown", "Uma história visual da dança social em 25 movimentos", "camille_a_brown_a_visual_history_of_social_dance_in_25_moves"],
 ] as const;
+
+export const screenings = screeningSources.map(([year, speaker, title, slug]) => ({
+  id: `ted-${slug}`,
+  year,
+  speaker,
+  title,
+  label: `Vídeo TED exibido na edição de ${year}`,
+  url: `https://www.ted.com/talks/${slug}`,
+  sourceUrl: `https://www.ted.com/talks/${slug}`,
+  embedUrl: `https://embed.ted.com/talks/${slug}`,
+  thumbnail: `/images/recordings/ted-${slug}.jpg`,
+}));

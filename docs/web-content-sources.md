@@ -36,13 +36,53 @@ The [official 2013 event page](https://www.ted.com/tedx/events/8987) links to
 All nine linked video IDs in `apps/web/src/content/archive.ts` were verified
 through YouTube oEmbed as published by TEDx Talks. Thumbnail images were
 downloaded from the corresponding public `i.ytimg.com/vi/<id>/hqdefault.jpg`
-URLs. Videos play on YouTube; the site does not rehost the recordings or load
-an embedded player on page view.
+URLs. Videos now play inside the site using click-to-load official embeds;
+no player is contacted on page view and recordings are not rehosted.
 
-The 2018 programme's Harvey Fineberg and Camille A. Brown videos link to their
-original TED pages. They are explicitly labeled as screenings, not as local
-speaker recordings. No reliably matched local-speaker recordings for 2015,
-2016 or 2018 have been added.
+The expanded collection has 13 verified local recordings: nine from 2013,
+Killa Z and Roselyn Silva from 2015, and Carla Vera Cruz and Fernanda Pontífice
+from 2016. Contemporary organizer exports connect the later-published videos
+to their actual event years. All recovered IDs returned HTTP 200 and TEDx
+Talks publisher metadata. See [local evidence](research/local-edition-evidence.md).
+
+Ten TED screenings are identified in the programmes, two per edition. They
+use verified TED oEmbed URLs and local thumbnails, explicitly labeled as
+screenings rather than local speaker recordings. The thumbnail refresh helper
+is `tools/migrations/fetch-ted-screening-assets.mjs`; it downloads images only.
+No local full-talk recordings for 2014 or 2018 have been located in this pass.
+The video library includes year and speaker/title filters and preserves the
+current player when the thumbnail queue is filtered.
+
+## Document recovery and edition completeness
+
+All five editions now have individual routes, including `/edicoes/2018/` while
+the original 2018 homepage and speaker URLs remain unchanged. The dedicated
+pages include a thematic overview, historical participants, announced
+programme, inline media and source/version notes. There are 47 participant
+profiles across the five edition pages (9, 9, 8, 8 and 13).
+
+`/oradores/` brings these 47 historical participant profiles together in one
+alphabetical directory with year filters, name/topic search, edition links,
+and links to full profiles where available. It includes artists and groups;
+it is not a claim that all entries are individual speakers or current staff.
+
+The research combined fully paginated Drive keyword discovery (306 unique
+matched file IDs), recursive Dropbox inventories (1,283 entries), local
+legacy code, Notes, Medium, Twitter and Instagram exports. Twelve recovered
+published photographs from 2013 and 2015 were copied unchanged; original
+exports were not modified. This is bounded coverage of accessible relevant
+sources, not a claim to have read every personal document or recovered every
+recording. Exact scope, sources and omissions are in:
+
+- [Drive evidence](research/drive-edition-evidence.md)
+- [Dropbox evidence and programme conflicts](research/dropbox-edition-evidence.md)
+- [Local evidence and photo provenance](research/local-edition-evidence.md)
+
+Earlier speaker invitations, commercial planning, contact/attendee lists,
+releases and identity documents were not turned into public website content.
+The late programmes supersede earlier drafts; announced times are labeled as
+such rather than asserted as measured live timings. Existing legacy databases
+and credentials remain preserved unchanged in Git.
 
 ## Team and contact
 

@@ -14,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: [`${siteConfig.url}/images/hero-revolution.jpg`],
     },
-    ...["edicoes", "videos", "equipa", "contactos", "participar", "proximas-edicoes"].map((path) => ({
+    ...["edicoes", "oradores", "videos", "equipa", "contactos", "participar", "proximas-edicoes"].map((path) => ({
       url: `${siteConfig.url}/${path}/`,
       lastModified: siteConfig.archiveUpdatedAt,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...editions.filter((edition) => edition.year !== "2018").map((edition) => ({
+    ...editions.map((edition) => ({
       url: `${siteConfig.url}${editionPath(edition.year)}`,
       lastModified: siteConfig.archiveUpdatedAt,
       changeFrequency: "yearly" as const,
