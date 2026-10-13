@@ -27,6 +27,7 @@ export const navItems = [
 export const footerLinks = [
   ...navItems,
   { label: "Contactos", href: "/contactos/" },
+  { label: "Identidade e design", href: "/identidade/" },
   { label: "Oradores de 2018", href: "/#speakers" },
   { label: "Programa de 2018", href: "/#programme" },
 ] as const;

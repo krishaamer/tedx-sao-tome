@@ -1,0 +1,39 @@
+{
+  "name": "TEDxSãoTomé — sistema do arquivo digital",
+  "version": "1.0.0",
+  "scope": "Tokens locais do website. Não substituem as orientações oficiais TEDx nem alteram os ficheiros históricos.",
+  "colors": [
+    { "name": "Vermelho", "variable": "--red", "value": "#eb0028", "usage": "Destaques e ações principais", "text": "#ffffff" },
+    { "name": "Vermelho de ação", "variable": "--red-dark", "value": "#bd001f", "usage": "Links, filtros e estados de interação", "text": "#ffffff" },
+    { "name": "Fundo escuro", "variable": "--black", "value": "#050505", "usage": "Navegação e superfícies escuras", "text": "#ffffff" },
+    { "name": "Texto", "variable": "--ink", "value": "#171717", "usage": "Títulos e texto principal", "text": "#ffffff" },
+    { "name": "Texto secundário", "variable": "--muted", "value": "#606066", "usage": "Descrições e metadados", "text": "#ffffff" },
+    { "name": "Linha", "variable": "--line", "value": "#dadade", "usage": "Separadores decorativos; não usar como único limite de campos", "text": "#171717" },
+    { "name": "Superfície suave", "variable": "--soft", "value": "#f4f4f2", "usage": "Painéis de apoio", "text": "#171717" },
+    { "name": "Branco", "variable": "--white", "value": "#ffffff", "usage": "Fundo principal e texto sobre superfícies escuras", "text": "#171717" }
+  ],
+  "primitives": [
+    { "variable": "--content", "value": "1180px" },
+    { "variable": "--font-sans", "value": "Arial, \"Helvetica Neue\", Helvetica, sans-serif" },
+    { "variable": "--space-1", "value": "4px" },
+    { "variable": "--space-2", "value": "8px" },
+    { "variable": "--space-3", "value": "12px" },
+    { "variable": "--space-4", "value": "16px" },
+    { "variable": "--space-5", "value": "24px" },
+    { "variable": "--space-6", "value": "32px" },
+    { "variable": "--space-7", "value": "48px" },
+    { "variable": "--space-8", "value": "64px" },
+    { "variable": "--radius-control", "value": "6px" },
+    { "variable": "--radius-card", "value": "8px" },
+    { "variable": "--control-min", "value": "44px" },
+    { "variable": "--motion-fast", "value": "160ms" }
+  ],
+  "archiveLogo": {
+    "path": "/images/tedxsaotome-logo.svg",
+    "source": "legacy/wordpress-2018/design/tedxsaotome-logo.svg",
+    "year": "2018",
+    "colors": ["#ec1c24", "#ffffff"],
+    "sha256": "76bd71ea47028af6fbca1940b9bb06310edace0420eb96869528623d3a1d00fc",
+    "note": "Ficheiro histórico preservado sem alterações. Letras brancas; apresentar sobre fundo preto."
+  }
+}

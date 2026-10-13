@@ -25,6 +25,17 @@ initials. Entries link back to their edition and to full individual profiles
 where available. Dialogs support Escape, keyboard focus containment and focus
 return to the card when closed.
 
+## Identity and design system
+
+`/identidade/` documents the CVI and local web design system, including the
+unchanged 2018 SVG logo, current UI colors, typography, new primitive tokens,
+copyable values, JSON downloads, and live edition/speaker/player components.
+The preserved logo red is explicitly distinguished from the modern UI red.
+This guide is linked from the footer and sitemap. It references current TEDx
+guidance and WCAG without claiming new brand approval or archive-wide certification.
+`pnpm verify:design-system` checks token/CSS alignment, swatch text contrast and
+logo hashes; it is also part of the shared CI `pnpm check` command.
+
 ## Development
 
 ```bash
