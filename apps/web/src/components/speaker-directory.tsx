@@ -72,10 +72,13 @@ export function SpeakerDirectory({ speakers }: { speakers: ArchiveSpeaker[] }) {
     const dialog = dialogRef.current;
     if (!dialog) return;
     const previousOverflow = document.body.style.overflow;
+    const previousRootOverflow = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     dialog.showModal();
     return () => {
       document.body.style.overflow = previousOverflow;
+      document.documentElement.style.overflow = previousRootOverflow;
       if (dialog.open) dialog.close();
       openerRef.current?.focus({ preventScroll: true });
     };
