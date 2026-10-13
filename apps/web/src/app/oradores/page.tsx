@@ -1,6 +1,9 @@
-import { ContentPage } from "@/components/content-page";
+import Link from "next/link";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
 import { SpeakerDirectory, type ArchiveSpeaker } from "@/components/speaker-directory";
-import { editionPath, editions } from "@/content/archive";
+import styles from "@/components/speaker-directory.module.css";
+import { editionPath, editions, recordings } from "@/content/archive";
 import { getEditionDocument, getSpeakerImage, getSpeakerProfile } from "@/content/edition-history";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -15,6 +18,9 @@ export default function AllSpeakersPage() {
   const speakers: ArchiveSpeaker[] = editions.flatMap((edition) =>
     (getEditionDocument(edition.year)?.speakers ?? []).map((speaker, index) => {
       const profile = getSpeakerProfile(edition.year, speaker.name);
+      // One published video includes an honorific absent from the programme.
+      // Keep the alias scoped to this edition, rather than using fuzzy matching.
+      const recordingName = edition.year === "2013" && speaker.name === "Robert Drewes" ? "Dr. Robert Drewes" : speaker.name;
       return {
         ...speaker,
         id: `${edition.year}-${index}`,
@@ -23,12 +29,22 @@ export default function AllSpeakersPage() {
         editionHref: editionPath(edition.year),
         profileHref: profile ? `/speakers/${profile.slug}/` : undefined,
         image: getSpeakerImage(edition.year, speaker.name),
+        recording: recordings.find((recording) => recording.year === edition.year && recording.speaker === recordingName),
       };
     })).toSorted((a, b) => a.name.localeCompare(b.name, "pt") || a.year.localeCompare(b.year));
 
   return (
-    <ContentPage kicker="As pessoas e as ideias" title="Todos os oradores e artistas." introduction="Cinco edições, muitas vozes. Encontre uma pessoa, descubra um tema ou percorra o programa de cada ano." compact>
-      <SpeakerDirectory speakers={speakers} />
-    </ContentPage>
+    <>
+      <SiteNav />
+      <main id="main-content" className="container">
+        <header className={styles.intro}>
+          <Link href="/" className={styles.back}>TEDxSãoTomé / As pessoas</Link>
+          <h1>Oradores e artistas</h1>
+          <p>Cinco edições. Muitas vozes. Conheça as pessoas e reveja as suas apresentações.</p>
+        </header>
+        <SpeakerDirectory speakers={speakers} />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
