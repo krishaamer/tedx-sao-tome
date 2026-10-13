@@ -1,16 +1,19 @@
 # TEDxSãoTomé web
 
-Modern static archive of the TEDxSãoTomé 2018 event, built with Next.js 16 and
-exported as static files.
+Modern static archive of the five TEDxSãoTomé editions, built with Next.js 16
+and exported as static files. The original 2018 event remains the homepage.
 
 The site includes the original event content and media in a responsive editorial
 design, static speaker profiles, structured event data, canonical metadata, a
 sitemap, `robots.txt`, a web manifest, and a custom 404 page.
 
-The wider archive includes dedicated earlier-edition pages, nine verified 2013
-recordings, the historical 2016 team roster, and contact, participation and
-future-edition information pages. Content sources and discrepancies are recorded
-in `docs/web-content-sources.md` at the monorepo root.
+Each edition has its own page, historical participant profiles, an announced
+programme and source notes. The video library has 13 local recordings and ten
+separately labeled TED screenings, with click-to-load playback, thumbnails,
+year filters and speaker/title search. Twelve recovered historical photographs
+complement the original media. The historical 2016 team and community pages
+remain available. Sources, coverage limits and draft discrepancies are recorded
+in `docs/web-content-sources.md` and `docs/research/` at the monorepo root.
 
 ## Development
 

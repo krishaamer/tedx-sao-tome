@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...editions.filter((edition) => edition.year !== "2018").map((edition) => ({
+    ...editions.map((edition) => ({
       url: `${siteConfig.url}${editionPath(edition.year)}`,
       lastModified: siteConfig.archiveUpdatedAt,
       changeFrequency: "yearly" as const,
