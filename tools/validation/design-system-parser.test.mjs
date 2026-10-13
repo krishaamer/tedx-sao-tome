@@ -84,15 +84,20 @@ test("ignores supports prelude text but visits actual roots inside at-rules", ()
   assert.deepEqual(parsed.duplicates, ["--canonical"]);
 });
 
-test("reads only direct root declarations, ignoring nested child declarations", () => {
+test("reads inherited root declarations in grouping at-rules but ignores child rules", () => {
   const parsed = parseRootTokens(`:root {
     --before: 4px;
     .child { --nested: 8px; }
-    @media (min-width: 760px) { --conditional-child: 12px; }
+    @media (min-width: 760px) {
+      --conditional-root: 12px;
+      @supports (display: grid) { --before: 24px; }
+      .child { --other-child: 32px; }
+    }
     --after: 16px;
   }`);
   assert.equal(parsed.roots, 1);
-  assert.deepEqual([...parsed.tokens], [["--before", "4px"], ["--after", "16px"]]);
+  assert.deepEqual([...parsed.tokens], [["--before", "24px"], ["--conditional-root", "12px"], ["--after", "16px"]]);
+  assert.deepEqual(parsed.duplicates, ["--before"]);
 });
 
 test("fails closed for malformed CSS instead of returning partial tokens", () => {

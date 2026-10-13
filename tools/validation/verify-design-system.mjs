@@ -84,14 +84,18 @@ export function parseRootTokens(css) {
       if (parent.type === "rule") return;
     }
     roots += 1;
-    for (const declaration of rule.nodes ?? []) {
-      // Do not walk declarations in nested child rules or at-rule bodies.
-      if (declaration.type !== "decl" || !/^--[\w-]+$/.test(declaration.prop)) continue;
+    rule.walkDecls((declaration) => {
+      if (!/^--[\w-]+$/.test(declaration.prop)) return;
+      // Grouping at-rules inherit this root scope. A nested child rule changes
+      // the selector and therefore is not a canonical token declaration.
+      for (let parent = declaration.parent; parent && parent !== rule; parent = parent.parent) {
+        if (parent.type === "rule") return;
+      }
       const variable = declaration.prop;
       if (tokens.has(variable)) duplicates.push(variable);
       const priority = declaration.important ? " !important" : "";
       tokens.set(variable, `${declaration.value.trim()}${priority}`);
-    }
+    });
   });
   return { tokens, duplicates, roots };
 }
