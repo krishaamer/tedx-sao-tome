@@ -265,33 +265,6 @@ export const programme = [
   ]
 ] as const;
 
-export const pastEvents = [
-  {
-    year: "2013",
-    theme: "Islands Connected",
-    date: "25.06.2013 - HOTEL PRAIA",
-    image: "/images/2013.jpg",
-  },
-  {
-    year: "2014",
-    theme: "Ponto Sem Retorno",
-    date: "15.07.2015 - BIBLIOTECA NACIONAL",
-    image: "/images/2014.jpg",
-  },
-  {
-    year: "2015",
-    theme: "Ponto Sem Retorno",
-    date: "15.07.2015 - BIBLIOTECA NACIONAL",
-    image: "/images/2015.jpg",
-  },
-  {
-    year: "2016",
-    theme: "Transcendência",
-    date: "25.07.2016 - HOTEL PESTANA",
-    image: "/images/2016.jpg",
-  },
-];
-
 export const socialLinks = [
   { label: "Facebook", short: "Fb", href: "https://www.facebook.com/tedxsaotome" },
   { label: "Instagram", short: "Ig", href: "https://www.instagram.com/tedxsaotome/" },

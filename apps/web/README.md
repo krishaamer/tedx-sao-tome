@@ -7,6 +7,11 @@ The site includes the original event content and media in a responsive editorial
 design, static speaker profiles, structured event data, canonical metadata, a
 sitemap, `robots.txt`, a web manifest, and a custom 404 page.
 
+The wider archive includes dedicated earlier-edition pages, nine verified 2013
+recordings, the historical 2016 team roster, and contact, participation and
+future-edition information pages. Content sources and discrepancies are recorded
+in `docs/web-content-sources.md` at the monorepo root.
+
 ## Development
 
 ```bash
@@ -19,8 +24,7 @@ Open <http://localhost:3000>.
 ## Validation
 
 ```bash
-pnpm lint
-pnpm build
+pnpm check
 ```
 
 The production export is written to `out/`. Both `out/` and `.next/` are
@@ -29,6 +33,11 @@ generated and excluded from Git.
 Routes use trailing slashes so the export can be hosted by any static web server
 without URL-extension rewrites. Deploy the contents of `out/` after a successful
 build.
+
+`pnpm check` also verifies exported page metadata, internal links, local media,
+JSON-LD, sitemap coverage and robots directives. GitHub Actions runs the same
+checks on pushes and pull requests. Browser verification artifacts belong in
+`output/playwright/` and are excluded from Git.
 
 ## Content provenance
 

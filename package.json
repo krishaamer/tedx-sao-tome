@@ -7,6 +7,7 @@
     "dev:web": "pnpm --filter @tedxsaotome/web dev",
     "lint": "pnpm --filter @tedxsaotome/web lint",
     "build": "pnpm --filter @tedxsaotome/web build",
-    "check": "pnpm lint && pnpm build"
+    "check": "pnpm lint && pnpm build && pnpm verify:export",
+    "verify:export": "node tools/validation/verify-static-export.mjs"
   }
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navItems, socialLinks } from "@/content/site";
+import { footerLinks, socialLinks } from "@/content/site";
 
 export function SiteFooter() {
   return (
@@ -14,13 +14,13 @@ export function SiteFooter() {
             width={220}
             height={55}
           />
-          <p>Arquivo digital das ideias e das pessoas que fizeram o TEDxSãoTomé 2018.</p>
+          <p>Ideias, pessoas e memórias das edições do TEDxSãoTomé.</p>
           <small>Este evento TEDx independente foi realizado sob licença TED.</small>
         </div>
         <div>
           <h2>Navegação</h2>
           <nav className="site-footer__links" aria-label="Navegação do rodapé">
-            {navItems.map((item) => (
+            {footerLinks.map((item) => (
               <Link href={item.href} key={item.href}>
                 {item.label}
               </Link>

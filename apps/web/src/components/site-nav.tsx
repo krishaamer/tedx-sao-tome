@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { navItems } from "@/content/site";
 
 type NavLinksProps = {
@@ -25,9 +25,19 @@ function NavLinks({ className, id, onNavigate }: NavLinksProps) {
 
 export function SiteNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <header className="site-nav" id="menu">
+    <header
+      className="site-nav"
+      id="menu"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && mobileOpen) {
+          setMobileOpen(false);
+          toggleRef.current?.focus();
+        }
+      }}
+    >
       <nav className="container site-nav__inner" aria-label="Navegação principal">
         <Link
           className="site-nav__brand"
@@ -41,14 +51,15 @@ export function SiteNav() {
             alt="TEDxSãoTomé"
             width={220}
             height={55}
-            priority
+            preload
           />
-          <span className="site-nav__edition">Arquivo 2018</span>
+          <span className="site-nav__edition">Ideias das ilhas</span>
         </Link>
         <NavLinks className="site-nav__links site-nav__links--desktop" />
         <button
           className="site-nav__toggle"
           type="button"
+          ref={toggleRef}
           aria-expanded={mobileOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMobileOpen((open) => !open)}

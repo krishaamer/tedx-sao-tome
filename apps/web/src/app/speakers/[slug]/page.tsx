@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
 import { speakers } from "@/content/2018";
-import { siteConfig } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
 type SpeakerPageProps = {
   params: Promise<{
@@ -31,28 +31,12 @@ export async function generateMetadata({ params }: SpeakerPageProps): Promise<Me
     };
   }
 
-  return {
-    title: speaker.name,
+  return pageMetadata({
+    title: `${speaker.name} — 2018`,
     description: `${speaker.talk} no TEDxSãoTomé 2018.`,
-    alternates: {
-      canonical: `/speakers/${speaker.slug}`,
-    },
-    openGraph: {
-      type: "profile",
-      title: `${speaker.name} | TEDxSãoTomé 2018`,
-      description: speaker.talk,
-      url: `/speakers/${speaker.slug}`,
-      siteName: siteConfig.name,
-      images: [
-        {
-          url: speaker.image,
-          width: 534,
-          height: 400,
-          alt: speaker.name,
-        },
-      ],
-    },
-  };
+    path: `/speakers/${speaker.slug}/`,
+    image: speaker.image,
+  });
 }
 
 export default async function SpeakerPage({ params }: SpeakerPageProps) {
@@ -88,7 +72,7 @@ export default async function SpeakerPage({ params }: SpeakerPageProps) {
                 width={534}
                 height={400}
                 sizes="(max-width: 860px) 100vw, 45vw"
-                priority
+                preload
               />
             </figure>
           </div>
@@ -96,6 +80,10 @@ export default async function SpeakerPage({ params }: SpeakerPageProps) {
         <section className="container speaker-copy" aria-labelledby="biography-heading">
           <p className="section-kicker">Perfil</p>
           <h2 id="biography-heading">Biografia</h2>
+          <p className="archive-note">
+            Texto publicado para a edição de 2018. As funções, projetos e referências
+            a inscrições refletem esse momento histórico.
+          </p>
           <div dangerouslySetInnerHTML={{ __html: speaker.bioHtml }} />
         </section>
         <nav className="speaker-pagination" aria-label="Navegar entre oradores">

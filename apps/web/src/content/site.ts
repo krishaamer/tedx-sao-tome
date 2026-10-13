@@ -4,13 +4,12 @@ export const siteConfig = {
   title: "TEDxSãoTomé 2018 | Re|Evolution",
   description:
     "Arquivo digital do TEDxSãoTomé 2018: Re|Evolution — ideias, oradores e programa de um evento TEDx organizado de forma independente em São Tomé e Príncipe.",
-  url: "https://tedxsaotome.com",
+  url: "https://www.tedxsaotome.com",
   locale: "pt_PT",
-  archiveUpdatedAt: "2026-07-22",
+  archiveUpdatedAt: "2026-10-14",
   event: {
     name: "TEDxSãoTomé 2018: Re|Evolution",
-    startDate: "2018-09-29T14:30:00+00:00",
-    endDate: "2018-09-29T23:59:00+00:00",
+    startDate: "2018-09-29T14:30:00+01:00",
     venue: "CACAU",
     city: "São Tomé",
     country: "São Tomé e Príncipe",
@@ -18,10 +17,17 @@ export const siteConfig = {
 } as const;
 
 export const navItems = [
-  { label: "Sobre TEDx", href: "/#about" },
-  { label: "Oradores", href: "/#speakers" },
-  { label: "Programa", href: "/#programme" },
-  { label: "Parceiros", href: "/#sponsors" },
+  { label: "Edições", href: "/edicoes/" },
+  { label: "Palestras", href: "/videos/" },
+  { label: "Equipa", href: "/equipa/" },
+  { label: "Participar", href: "/participar/" },
+] as const;
+
+export const footerLinks = [
+  ...navItems,
+  { label: "Contactos", href: "/contactos/" },
+  { label: "Oradores de 2018", href: "/#speakers" },
+  { label: "Programa de 2018", href: "/#programme" },
 ] as const;
 
 export const socialLinks = [
