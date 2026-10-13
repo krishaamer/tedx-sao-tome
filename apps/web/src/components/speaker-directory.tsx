@@ -65,7 +65,7 @@ export function SpeakerDirectory({ speakers }: { speakers: ArchiveSpeaker[] }) {
     (year === "all" || speaker.year === year) &&
     (!withVideo || speaker.recording) &&
     searchable(`${speaker.name} ${speaker.topic ?? ""} ${speaker.role ?? ""} ${speaker.bio} ${speaker.year}`).includes(query))
-    .toSorted((a, b) => (sort === "recent" ? b.year.localeCompare(a.year) : sort === "oldest" ? a.year.localeCompare(b.year) : 0) || a.name.localeCompare(b.name, "pt"));
+    .sort((a, b) => (sort === "recent" ? b.year.localeCompare(a.year) : sort === "oldest" ? a.year.localeCompare(b.year) : 0) || a.name.localeCompare(b.name, "pt"));
 
   useEffect(() => {
     if (!selected) return;
