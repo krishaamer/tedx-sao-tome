@@ -16,8 +16,14 @@ remain available. Sources, coverage limits and draft discrepancies are recorded
 in `docs/web-content-sources.md` and `docs/research/` at the monorepo root.
 
 `/oradores/` shows all 47 historical speaker, artist and group profiles on one
-page, alphabetically, with edition filters and name/topic search. Entries link
-back to their edition and to full individual profiles where available.
+page in a portrait-led grid, with edition counts, name/topic/biography search,
+chronological sorting (latest edition first by default) and a recordings-only
+filter. Profile dialogs keep browsing
+in place, show the historical biography, and offer click-to-load inline playback
+for the 13 matched local recordings. Portraits without a verified image use name
+initials. Entries link back to their edition and to full individual profiles
+where available. Dialogs support Escape, keyboard focus containment and focus
+return to the card when closed.
 
 ## Development
 
