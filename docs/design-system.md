@@ -42,6 +42,14 @@ adds explicit local font, spacing, radius, control-size and motion primitives.
 The font stack is unchanged; body CSS now references `--font-sans`. This does
 not migrate every existing component's hardcoded styles.
 
+The existing page-level horizontal overflow rule uses `clip`, with `hidden`
+retained as a fallback. This restores the intended sticky header, directory
+filters and desktop guide index without enabling horizontal page scrolling.
+The cause was verified with a live CSS-only local test; the change is checked
+on the guide and existing content routes. See the
+[MDN overflow-x reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x)
+for the scroll-container distinction.
+
 The component specimens reuse `EditionNav` and `SpeakerDirectory`, which also
 uses the existing `RecordingGrid`. Three real historical profiles illustrate a
 portrait, a missing-photo initials treatment and a recorded presentation. The
