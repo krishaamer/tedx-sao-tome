@@ -61,6 +61,11 @@ pages include a thematic overview, historical participants, announced
 programme, inline media and source/version notes. There are 47 participant
 profiles across the five edition pages (9, 9, 8, 8 and 13).
 
+`/oradores/` brings these 47 historical participant profiles together in one
+alphabetical directory with year filters, name/topic search, edition links,
+and links to full profiles where available. It includes artists and groups;
+it is not a claim that all entries are individual speakers or current staff.
+
 The research combined fully paginated Drive keyword discovery (306 unique
 matched file IDs), recursive Dropbox inventories (1,283 entries), local
 legacy code, Notes, Medium, Twitter and Instagram exports. Twelve recovered

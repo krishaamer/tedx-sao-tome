@@ -18,6 +18,7 @@ export const siteConfig = {
 
 export const navItems = [
   { label: "Edições", href: "/edicoes/" },
+  { label: "Oradores", href: "/oradores/" },
   { label: "Palestras", href: "/videos/" },
   { label: "Equipa", href: "/equipa/" },
   { label: "Participar", href: "/participar/" },

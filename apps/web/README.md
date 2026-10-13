@@ -15,6 +15,10 @@ complement the original media. The historical 2016 team and community pages
 remain available. Sources, coverage limits and draft discrepancies are recorded
 in `docs/web-content-sources.md` and `docs/research/` at the monorepo root.
 
+`/oradores/` shows all 47 historical speaker, artist and group profiles on one
+page, alphabetically, with edition filters and name/topic search. Entries link
+back to their edition and to full individual profiles where available.
+
 ## Development
 
 ```bash
