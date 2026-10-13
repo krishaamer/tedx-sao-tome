@@ -50,6 +50,10 @@ on the guide and existing content routes. See the
 [MDN overflow-x reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x)
 for the scroll-container distinction.
 
+Profile dialogs save, lock and restore overflow on both the body and root
+element, so wheel events on the backdrop cannot scroll the page after the
+sticky-navigation fix. Escape and close retain focus return to the opener.
+
 The component specimens reuse `EditionNav` and `SpeakerDirectory`, which also
 uses the existing `RecordingGrid`. Three real historical profiles illustrate a
 portrait, a missing-photo initials treatment and a recorded presentation. The

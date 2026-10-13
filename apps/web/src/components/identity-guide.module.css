@@ -135,9 +135,10 @@
 }
 @media print {
   .hero { color: #000; background: #fff; }
-  .hero p, .version, .back { color: #333; }
+  .hero .heroGrid p, .version, .back { color: #333; }
   .heroLogo, .contents, .copyControl { display: none; }
   .heroGrid, .layout { display: block; }
   .section { break-inside: avoid; }
+  .logoSpecimen { print-color-adjust: exact; }
   .codeBlock pre { color: #000; background: #fff; white-space: pre-wrap; }
 }
