@@ -61,7 +61,8 @@ specimen is clearly distinguished from the full 47-profile directory.
 
 The only new client interaction is copying a value, with an announced success
 state and a manual-selection fallback when clipboard access is unavailable.
-No new dependency or external font is added.
+No new browser dependency or external font is added. The build-time validator
+uses a pinned PostCSS development dependency to parse CSS declarations.
 
 ## Verification
 
@@ -69,6 +70,12 @@ No new dependency or external font is added.
 bounded resource paths, and both logo hashes/fill colors. It runs within
 `pnpm check`, including CI. Static-export validation also covers the new route,
 sitemap entry, section anchors, footer link and downloadable resources.
+
+Tokens have one authoritative declaration in a literal `:root` rule (including
+a selector list containing `:root`). Conditional blocks are inspected for
+duplicates too. Descendant, negated and pseudo-element selectors are not token
+sources. Parser regression tests cover quoted values, at-rule preludes, exact
+root selectors, malformed CSS, and direct or symlinked CLI invocation.
 
 Browser checks should cover phone/desktop layouts, keyboard navigation, copy
 success/failure (mock the clipboard instead of changing the user's clipboard),

@@ -10,5 +10,8 @@
     "check": "pnpm lint && pnpm verify:design-system && pnpm build && pnpm verify:export",
     "verify:design-system": "node --test tools/validation/design-system-parser.test.mjs && node tools/validation/verify-design-system.mjs",
     "verify:export": "node tools/validation/verify-static-export.mjs"
+  },
+  "devDependencies": {
+    "postcss": "8.4.31"
   }
 }

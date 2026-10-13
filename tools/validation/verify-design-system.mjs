@@ -1,9 +1,11 @@
 import { createHash } from "node:crypto";
 import { readFile, realpath, stat } from "node:fs/promises";
-import { isAbsolute, relative, resolve, sep } from "node:path";
+import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import postcss from "postcss";
 
-const repository = fileURLToPath(new URL("../../", import.meta.url));
+const modulePath = await realpath(fileURLToPath(import.meta.url));
+const repository = resolve(dirname(modulePath), "../..");
 const publicDirectory = resolve(repository, "apps/web/public");
 const failures = [];
 const colorPattern = /^#(?:[\da-f]{3}|[\da-f]{6})$/i;
@@ -65,115 +67,45 @@ function contrast(first, second) {
   return (Math.max(light, dark) + 0.05) / (Math.min(light, dark) + 0.05);
 }
 
-function quotedEnd(text, start) {
-  const quote = text[start];
-  for (let index = start + 1; index < text.length; index += 1) {
-    if (text[index] === "\\") index += 1;
-    else if (text[index] === quote) return index;
-  }
-  return text.length - 1;
-}
-
-function withoutCssComments(css) {
-  let result = "";
-  for (let index = 0; index < css.length; index += 1) {
-    if (css[index] === '"' || css[index] === "'") {
-      const end = quotedEnd(css, index);
-      result += css.slice(index, end + 1);
-      index = end;
-    } else if (css[index] === "\\") {
-      result += css.slice(index, index + 2);
-      index += 1;
-    } else if (css[index] === "/" && css[index + 1] === "*") {
-      const end = css.indexOf("*/", index + 2);
-      // A comment separates surrounding tokens, but comment-like text inside
-      // a quoted value remains literal and must not be removed.
-      result += " ";
-      index = end === -1 ? css.length : end + 1;
-    } else {
-      result += css[index];
-    }
-  }
-  return result;
-}
-
-function hasRootSelector(selector) {
-  for (let index = 0; index < selector.length; index += 1) {
-    if (selector[index] === '"' || selector[index] === "'") index = quotedEnd(selector, index);
-    else if (selector[index] === "\\") index += 1;
-    else if (selector.startsWith(":root", index) && selector[index - 1] !== ":" && !/[\w-]/.test(selector[index + 5] ?? "")) return true;
-  }
-  return false;
-}
-
-function blockEnd(css, start) {
-  let depth = 1;
-  for (let index = start + 1; index < css.length; index += 1) {
-    if (css[index] === '"' || css[index] === "'") index = quotedEnd(css, index);
-    else if (css[index] === "\\") index += 1;
-    else if (css[index] === "{") depth += 1;
-    else if (css[index] === "}" && --depth === 0) return index;
-  }
-  return css.length;
-}
-
-function rootDeclarations(body, tokens, duplicates) {
-  let start = 0;
-  let depth = 0;
-  function declaration(end) {
-    const text = body.slice(start, end).trim();
-    const property = /^(--[\w-]+)\s*:/.exec(text);
-    if (!property) return;
-    const variable = property[1];
-    if (tokens.has(variable)) duplicates.push(variable);
-    tokens.set(variable, text.slice(property[0].length).trim());
-  }
-  for (let index = 0; index < body.length; index += 1) {
-    const character = body[index];
-    if (character === '"' || character === "'") index = quotedEnd(body, index);
-    else if (character === "\\") index += 1;
-    else if ("([{".includes(character)) depth += 1;
-    else if (")]}".includes(character)) depth = Math.max(0, depth - 1);
-    else if (character === ";" && depth === 0) {
-      declaration(index);
-      start = index + 1;
-    }
-  }
-  // CSS permits omitting the final declaration's semicolon.
-  declaration(body.length);
-}
-
 export function parseRootTokens(css) {
   if (typeof css !== "string") throw new TypeError("CSS source must be a string");
-  const source = withoutCssComments(css);
+  const stylesheet = postcss.parse(css, { from: undefined });
   const tokens = new Map();
   const duplicates = [];
   let roots = 0;
-  let start = 0;
-  for (let index = 0; index < source.length; index += 1) {
-    const character = source[index];
-    if (character === '"' || character === "'") index = quotedEnd(source, index);
-    else if (character === "\\") index += 1;
-    else if (character === "{") {
-      if (hasRootSelector(source.slice(start, index))) {
-        const end = blockEnd(source, index);
-        rootDeclarations(source.slice(index + 1, end), tokens, duplicates);
-        roots += 1;
-        index = end;
-      }
-      start = index + 1;
-    } else if (character === "}" || character === ";") {
-      start = index + 1;
+
+  stylesheet.walkRules((rule) => {
+    // Only a literal root selector supplies canonical tokens. This excludes
+    // descendants, :not(:root), :root::before and quoted attribute values.
+    if (!rule.selectors.some((selector) => selector.replace(/\/\*[\s\S]*?\*\//g, " ").trim() === ":root")) return;
+    // A nested rule acquires its parent selector even if its own text is
+    // :root. At-rule containers remain eligible (for example @supports).
+    for (let parent = rule.parent; parent; parent = parent.parent) {
+      if (parent.type === "rule") return;
     }
-  }
+    roots += 1;
+    for (const declaration of rule.nodes ?? []) {
+      // Do not walk declarations in nested child rules or at-rule bodies.
+      if (declaration.type !== "decl" || !/^--[\w-]+$/.test(declaration.prop)) continue;
+      const variable = declaration.prop;
+      if (tokens.has(variable)) duplicates.push(variable);
+      const priority = declaration.important ? " !important" : "";
+      tokens.set(variable, `${declaration.value.trim()}${priority}`);
+    }
+  });
   return { tokens, duplicates, roots };
 }
 
 function cssTokens(css) {
-  const { tokens, duplicates, roots } = parseRootTokens(css);
-  if (!roots) fail("globals.css", "no readable :root declaration block found");
-  for (const variable of duplicates) fail(`globals.css ${variable}`, "duplicate :root declaration; keep one authoritative value");
-  return tokens;
+  try {
+    const { tokens, duplicates, roots } = parseRootTokens(css);
+    if (!roots) fail("globals.css", "no literal :root declaration block found");
+    for (const variable of duplicates) fail(`globals.css ${variable}`, "duplicate :root declaration; keep one authoritative value");
+    return tokens;
+  } catch (error) {
+    fail("globals.css", `cannot parse CSS: ${error.reason ?? error.message}${error.line ? ` at line ${error.line}, column ${error.column}` : ""}`);
+    return new Map();
+  }
 }
 
 function checkTokenArray(document, key, css, seen) {
@@ -298,4 +230,7 @@ async function main() {
   console.log(`Design-system validation passed: ${checkedTokens} CSS tokens, ${checkedSwatches} accessible swatches (minimum ${minimumContrast.toFixed(2)}:1), and public/source logo SHA-256 and archival fills match.`);
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();
+if (process.argv[1]) {
+  const entryPath = await realpath(resolve(process.argv[1])).catch(() => null);
+  if (entryPath === modulePath) await main();
+}

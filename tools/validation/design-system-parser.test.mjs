@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, symlink } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { parseRootTokens } from "./verify-design-system.mjs";
 
@@ -55,6 +58,60 @@ test("ignores variables outside root blocks and root text in quoted selectors", 
   assert.deepEqual([...parsed.tokens], [["--inside", "16px"]]);
 });
 
+test("only literal root selectors, including selector lists, are canonical", () => {
+  const parsed = parseRootTokens(`.theme :root { --descendant: 4px; }
+    :not(:root) { --negated: 8px; }
+    :root::before { --pseudo-element: 12px; }
+    :root:hover { --state: 16px; }
+    :is(:root) { --functional: 20px; }
+    .theme { :root { --nested-root: 24px; } }
+    html, :root, .theme { --literal: 32px; }
+    :root /* selector comment */ { --commented: 48px; }`);
+  assert.equal(parsed.roots, 2);
+  assert.deepEqual([...parsed.tokens], [["--literal", "32px"], ["--commented", "48px"]]);
+});
+
+test("ignores supports prelude text but visits actual roots inside at-rules", () => {
+  const parsed = parseRootTokens(`@supports selector(:root) {
+      .theme { --not-canonical: 4px; }
+    }
+    @supports selector(:root) {
+      :root { --canonical: 8px; }
+      @media (min-width: 760px) { :root { --canonical: 12px; } }
+    }`);
+  assert.equal(parsed.roots, 2);
+  assert.deepEqual([...parsed.tokens], [["--canonical", "12px"]]);
+  assert.deepEqual(parsed.duplicates, ["--canonical"]);
+});
+
+test("reads only direct root declarations, ignoring nested child declarations", () => {
+  const parsed = parseRootTokens(`:root {
+    --before: 4px;
+    .child { --nested: 8px; }
+    @media (min-width: 760px) { --conditional-child: 12px; }
+    --after: 16px;
+  }`);
+  assert.equal(parsed.roots, 1);
+  assert.deepEqual([...parsed.tokens], [["--before", "4px"], ["--after", "16px"]]);
+});
+
+test("fails closed for malformed CSS instead of returning partial tokens", () => {
+  for (const css of [
+    ":root { --red: #fff;",
+    ':root { --name: "unterminated; }',
+    ":root { --red: #fff; } /* unterminated comment",
+  ]) {
+    assert.throws(() => parseRootTokens(css), { name: "CssSyntaxError" });
+  }
+});
+
+test("preserves important priority for exact documented-value comparison", () => {
+  const parsed = parseRootTokens(":root { --red: #eb0028 !important; --font: Arial, sans-serif !IMPORTANT }");
+  assert.equal(parsed.tokens.get("--red"), "#eb0028 !important");
+  assert.equal(parsed.tokens.get("--font"), "Arial, sans-serif !important");
+  assert.notEqual(parsed.tokens.get("--red"), "#eb0028");
+});
+
 test("preserves exact values and semicolons inside unquoted functions", () => {
   const parsed = parseRootTokens(String.raw`:root {
     --image: url(data:image/svg+xml;base64,abc);
@@ -86,4 +143,27 @@ test("importing the parser does not execute the CLI validator", () => {
   assert.equal(result.status, 0, result.stderr);
   assert.equal(result.stdout, "");
   assert.equal(result.stderr, "");
+});
+
+test("direct CLI execution runs the validator", () => {
+  const modulePath = fileURLToPath(new URL("./verify-design-system.mjs", import.meta.url));
+  const result = spawnSync(process.execPath, [modulePath], { encoding: "utf8", timeout: 10000 });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Design-system validation passed:/);
+  assert.equal(result.stderr, "");
+});
+
+test("symlink CLI execution runs the validator with the actual repository path", async () => {
+  const modulePath = fileURLToPath(new URL("./verify-design-system.mjs", import.meta.url));
+  const directory = await mkdtemp(join(tmpdir(), "tedx-design-parser-cli-"));
+  try {
+    const entry = join(directory, "validator.mjs");
+    await symlink(modulePath, entry);
+    const result = spawnSync(process.execPath, [entry], { encoding: "utf8", timeout: 10000 });
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /Design-system validation passed:/);
+    assert.equal(result.stderr, "");
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
 });

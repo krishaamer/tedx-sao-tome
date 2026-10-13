@@ -35,6 +35,8 @@ This guide is linked from the footer and sitemap. It references current TEDx
 guidance and WCAG without claiming new brand approval or archive-wide certification.
 `pnpm verify:design-system` checks token/CSS alignment, swatch text contrast and
 logo hashes; it is also part of the shared CI `pnpm check` command.
+Its build-time CSS parser is a pinned development dependency; the guide adds no
+browser dependency or external font.
 
 ## Development
 
